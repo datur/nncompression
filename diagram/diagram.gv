@@ -1,0 +1,112 @@
+digraph "Current State of FPGA Deployment of Neural Networks" {
+	graph [concentrate=true overlap=false splines=spline]
+	node [color=black shape=box]
+	compound=true
+	subgraph cluster_1 {
+		color=navyblue style=bold
+		CNTK
+		ONNX
+		label=Microsoft
+	}
+	subgraph cluster_0 {
+		color=dodgerblue style=bold
+		rankdir=LR
+		PyTorch
+		Caffe2
+		Glow
+		PyTorch -> Caffe2 [dir=none style=invisible]
+		label=Facebook
+	}
+	subgraph cluster_2 {
+		color=orange style=bold
+		Tensorflow
+		"Tensorflow Lite"
+		Keras
+		label=Google
+	}
+	subgraph cluster_3 {
+		color=red style=bold
+		MxNet
+		Chainer
+		Caffe
+		label=Other
+	}
+	subgraph cluster_4 {
+		color=royalblue1 style=bold
+		Distiller
+		OpenVino
+		label=Intel
+	}
+	subgraph cluster_5 {
+		color=crimson style=bold
+		subgraph cluster_6 {
+			Brevitas
+			"FINN-HLS"
+			label=FINN
+		}
+		subgraph cluster_7 {
+			subgraph cluster_8 {
+				"AI Optimizer"
+				"AI Quantizer"
+				"AI Compiler"
+				"AI Optimizer" -> "AI Quantizer" [dir=none style=invisible]
+				"AI Quantizer" -> "AI Compiler" [dir=none style=invisible]
+				label="Model Optimization"
+			}
+			subgraph cluster_9 {
+				"Deep Learning Processing Unit"
+				label=Overlay
+			}
+			"AI Profiler"
+			"Vitis Accellerated Libraries"
+			"Xilinx Runtime Library"
+			"AI Compiler" -> "Xilinx Runtime Library" [ltail=cluster_8]
+			"Vitis Accellerated Libraries" -> "AI Quantizer" [lhead=cluster_8]
+			"AI Quantizer" -> "AI Profiler" [ltail=cluster_8]
+			"AI Profiler" -> "AI Quantizer" [lhead=cluster_8]
+			"Xilinx Runtime Library" -> "Deep Learning Processing Unit" [lhead=cluster_9]
+			label=Vitis
+		}
+		label=Xilinx
+	}
+	subgraph cluster_10 {
+		color=lightskyblue style=bold
+		Relay
+		VTA
+		label=TVM
+	}
+	"FPGA Deployment" [shape=hexagon]
+	_ [style=invis]
+	_ -> Relay [dir=none style=invis]
+	_ -> Tensorflow [dir=none style=invis]
+	PyTorch -> ONNX
+	CNTK -> ONNX
+	MxNet -> ONNX
+	Caffe2 -> ONNX
+	Tensorflow -> ONNX
+	Chainer -> ONNX
+	Keras -> ONNX
+	PyTorch -> VTA
+	Tensorflow -> VTA
+	ONNX -> VTA
+	Keras -> VTA
+	MxNet -> VTA
+	"Tensorflow Lite" -> VTA
+	Relay -> VTA
+	Caffe2 -> VTA
+	Tensorflow -> OpenVino
+	ONNX -> OpenVino
+	Caffe -> OpenVino
+	PyTorch -> Distiller
+	PyTorch -> Glow
+	PyTorch -> Brevitas
+	Brevitas -> "FINN-HLS"
+	Caffe -> "AI Quantizer" [lhead=cluster_8]
+	Tensorflow -> "AI Quantizer" [lhead=cluster_8]
+	PyTorch -> "AI Quantizer" [lhead=cluster_8 style=dashed]
+	"Deep Learning Processing Unit" -> "FPGA Deployment"
+	OpenVino -> "FPGA Deployment"
+	VTA -> "FPGA Deployment"
+	Glow -> "FPGA Deployment"
+	"FINN-HLS" -> "FPGA Deployment"
+}
