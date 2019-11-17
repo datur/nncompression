@@ -4,7 +4,7 @@
 
 Current State of Neural Network Compression and Deployment
 
-![](diagram/diagram.gv.png)
+![Current State of Neural Network Compression and Deployment](diagram/diagram.gv.png)
 
 ## Tools:
 
@@ -27,8 +27,8 @@ Current State of Neural Network Compression and Deployment
 
 | Tool                                                                                                                                                    | Desc                                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [FINN](https://xilinx.github.io/finn/)                                                                                                                  |
-| [Vitis](https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html)                                                                         |
+| [Brevitas](https://github.com/Xilinx/brevitas)                                                                                                          | Xilinx Research team Neural Network Quantization Framework from Xilinx Research FINN project Build ontop of PyTorch. Papers include: Link to papers here          |
+| [Vitis](https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html)                                                                         | Xilinx commercial software Suite                                                                                                                                  |
 | [Intel Distiller](https://github.com/NervanaSystems/distiller)                                                                                          | Compression Library ontop of PyTorch. State of the art algorithms. Includes Pruning, Quantisation, Regularization, Knowledge Distilation, Conditional Computation |
 | [Keras-Surgeon](https://github.com/BenWhetton/keras-surgeon)                                                                                            |
 | [QNNPACK](https://github.com/pytorch/QNNPACK)                                                                                                           |
@@ -38,10 +38,12 @@ Current State of Neural Network Compression and Deployment
 
 ### Deployment Tools:
 
-| Tool                                                          | Maintainer | Desc                                       |
-| ------------------------------------------------------------- | ---------- | ------------------------------------------ |
-| [TVM Neural Network Compiler Stack](https://tvm.ai/)          | Apache     | Reay. VTA                                  |
-| [Glow](https://github.com/pytorch/glow)                       | Facebook   | Pytorch Compiler                           |
-| [OpenVino](https://software.intel.com/en-us/openvino-toolkit) | Intel      | Deployment and model optimization for FPGA |
+| Tool                                                                            | Maintainer      | Desc                                       |
+| ------------------------------------------------------------------------------- | --------------- | ------------------------------------------ |
+| [TVM Neural Network Compiler Stack](https://tvm.ai/)                            | Apache          | Reay. VTA                                  |
+| [Glow](https://github.com/pytorch/glow)                                         | Facebook        | Pytorch Compiler                           |
+| [OpenVino](https://software.intel.com/en-us/openvino-toolkit)                   | Intel           | Deployment and model optimization for FPGA |
+| [FINN-HLS](https://github.com/Xilinx/finn-hlslib)                               | Xilinx Research |                                            |
+| [Vitis](https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html) | Xilinx          | Commercial Software stack                  |
 
 ## References
