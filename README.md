@@ -6,53 +6,42 @@ Current State of Neural Network Compression and Deployment
 
 ![](diagram/diagram.gv.png)
 
-### Tools:
+## Tools:
 
-Model Description Libraries:
+### Model Description Libraries:
 
-- PyTorch
-  - Facebook backed and Open Source.
-  - Dynamic Computational graph
-- Tensorflow
-  - Google Backed. Tensorflow Lite for Mobile Deployment. Python and C++.
-  - Static graph
-- Keras
-  - Google Employee François Cholle developed. Great for quick prototyping. Wrapper for Tensorflow, Theano, CNTK.
-- CNTK
-  - Microsoft backed. Depreciated.
-- ONNX
-  - Joint Venture between Facebook and Microsoft. Wide spread enterprise use.
-  - Multiple libraries convert to universal Model
-  - Interchangable AI Models
-- MxNet
-  - Apache.
-- Chainer
-- Caffe
-  - UC Berkley Project. Depreciated
-- Caffe2
-  - Merged with PyTorch as of 2017.
-- Theano
-  - Depreciated
+| Library                                                     | Maintainer                                    | Desc                                                                                                          | Status             |
+| ----------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [PyTorch](https://pytorch.org/)                             | Facebook                                      | Facebook backed and Open Source. Dynamic Computational graph                                                  | Actively Developed |
+| [Tensorflow](https://www.tensorflow.org/)                   | Google                                        | Google Backed. Tensorflow Lite for Mobile Deployment. Python and C++. Static graph                            | Actively Developed |
+| [Keras](https://keras.io/)                                  |                                               | Google Employee François Cholle developed. Great for quick prototyping. Wrapper for Tensorflow, Theano, CNTK. | Active             |
+| [CNTK](https://docs.microsoft.com/en-gb/cognitive-toolkit/) | Microsoft                                     | Microsoft backed.                                                                                             | Depreciated        |
+| [ONNX](https://onnx.ai/)                                    | Joint Venture between Facebook and Microsoft. | Wide spread enterprise use. Multiple libraries convert to universal Model. Interchangable AI Models           | Actively Developed |
+| [MxNet](https://mxnet.apache.org/)                          | Apache                                        |                                                                                                               | Actively Developed |
+| [Chainer](https://chainer.org/)                             |                                               |                                                                                                               | Actively Developed |
+| [Caffe](https://caffe.berkeleyvision.org/)                  | UC Berkley                                    |                                                                                                               | Depreciated        |
+| [Caffe2](https://caffe2.ai/)                                | Merged with PyTorch as of 2018                |                                                                                                               | Depreciated        |
+| [Theano](http://deeplearning.net/software/theano/)          |                                               |                                                                                                               | Depreciated        |
 
-Compression Libraries and extensions:
+### Compression Libraries and extensions:
 
-- FINN [Link](https://xilinx.github.io/finn/)
-- Vitis [Link](https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html)
-- Intel Distiller [Link](https://github.com/NervanaSystems/distiller)
-  - Compression Library ontop of PyTorch
-  - State of the art algorithms
-  - Includes Pruning, Quantisation, Regularization, Knowledge Distilation, Conditional Computation
-- Keras-Surgeon [Link](https://github.com/BenWhetton/keras-surgeon)
-- QNNPACK [Link](https://github.com/pytorch/QNNPACK)
-- MXNet Contrib Quantization [Link](https://cwiki.apache.org/confluence/display/MXNET/MXNet+Graph+Optimization+and+Quantization+based+on+subgraph+and+MKL-DNN)
-- tensorflow_model_optimization [Link](https://www.tensorflow.org/model_optimization)
-- Chainer Pruner [link](https://github.com/DeNA/ChainerPruner)
+| Tool                                                                                                                                                    | Desc                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [FINN](https://xilinx.github.io/finn/)                                                                                                                  |
+| [Vitis](https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html)                                                                         |
+| [Intel Distiller](https://github.com/NervanaSystems/distiller)                                                                                          | Compression Library ontop of PyTorch. State of the art algorithms. Includes Pruning, Quantisation, Regularization, Knowledge Distilation, Conditional Computation |
+| [Keras-Surgeon](https://github.com/BenWhetton/keras-surgeon)                                                                                            |
+| [QNNPACK](https://github.com/pytorch/QNNPACK)                                                                                                           |
+| [MXNet Contrib Quantization](https://cwiki.apache.org/confluence/display/MXNET/MXNet+Graph+Optimization+and+Quantization+based+on+subgraph+and+MKL-DNN) |
+| [tensorflow_model_optimization](https://www.tensorflow.org/model_optimization)                                                                          |
+| [Chainer Pruner](https://github.com/DeNA/ChainerPruner)                                                                                                 |
 
-Deployment Tools:
+### Deployment Tools:
 
-- TVM Neural Network Compiler Stack
-  - Reay
-  - VTA
-- Glow
-- OpenVino
-  - Deployment and model optimization for FPGA
+| Tool                                                          | Maintainer | Desc                                       |
+| ------------------------------------------------------------- | ---------- | ------------------------------------------ |
+| [TVM Neural Network Compiler Stack](https://tvm.ai/)          | Apache     | Reay. VTA                                  |
+| [Glow](https://github.com/pytorch/glow)                       | Facebook   | Pytorch Compiler                           |
+| [OpenVino](https://software.intel.com/en-us/openvino-toolkit) | Intel      | Deployment and model optimization for FPGA |
+
+## References
