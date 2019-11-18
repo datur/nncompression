@@ -22,6 +22,8 @@ Current State of Neural Network Compression and Deployment
 | [Caffe](https://caffe.berkeleyvision.org/)                  | UC Berkley                                    |                                                                                                               | Depreciated        |
 | [Caffe2](https://caffe2.ai/)                                | Merged with PyTorch as of 2018                |                                                                                                               | Depreciated        |
 | [Theano](http://deeplearning.net/software/theano/)          |                                               |                                                                                                               | Depreciated        |
+| [OpenNN](http://www.opennn.net/)                            |                                               | artelnics                                                                                                     | C++ library        | Actively Developed |
+
 
 ### Compression Libraries and extensions:
 
@@ -47,3 +49,5 @@ Current State of Neural Network Compression and Deployment
 | [Vitis](https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html) | Xilinx          | Commercial Software stack                  |
 
 ## References
+
+List of papers on pruning: [Link](https://github.com/he-y/Awesome-Pruning)
