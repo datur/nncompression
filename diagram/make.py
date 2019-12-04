@@ -159,9 +159,9 @@ if __name__ == "__main__":
     fmt = args.output_format
 
     print(base_dir+args.filename)
-    g = draw_graph(format=fmt, filename=filename,
+    g = draw_graph(fmt=fmt, filename=filename,
                    spline_type=args.line_type)
 
     g.save()
-    g.render(filename=filename, format=fmt,
+    g.render(filename=filename, fmt=fmt,
              view=True if args.show == 'y' else False)
