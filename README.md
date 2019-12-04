@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d9f3d81e1f54697a166253a14c7dde5)](https://www.codacy.com/manual/davidpaulturner350/nncompression?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=davidturner94/nncompression&amp;utm_campaign=Badge_Grade)
+
 # Masters Thesis
 
 ## Neural Network Compression
