@@ -34,10 +34,6 @@ def draw_graph(format, filename, spline_type):
         c.node('Tensorflow')
         c.node('Tensorflow Lite')
         c.node('Keras')
-        # c.edge('Tensorflow', 'Tensorflow Lite',
-        #        style='invisible', dir="none", rank='same')
-        # c.edge('Keras', 'Tensorflow Lite',
-        #        style='invisible', dir="none", rank='same')
         c.attr(label='Google')
 
     with g.subgraph(name='cluster_3') as c:
@@ -45,18 +41,12 @@ def draw_graph(format, filename, spline_type):
         c.node('MxNet')
         c.node('Chainer')
         c.node('Caffe')
-        # c.edge('MxNet', 'Chainer',
-        #        style='invisible', dir="none", rank='same')
-        # c.edge('Chainer', 'Caffe',
-        #        style='invisible', dir="none", rank='same')
         c.attr(label='Other')
 
     with g.subgraph(name='cluster_4') as c:
         c.attr(style='bold', color='royalblue1')
         c.node('Distiller')
         c.node('OpenVino')
-        # c.edge('Distiller', 'OpenVino',
-        #        style='invisible', dir="none", rank='same')
         c.attr(label='Intel')
 
     with g.subgraph(name='cluster_5') as c:
@@ -95,10 +85,6 @@ def draw_graph(format, filename, spline_type):
             v.edge('AI Profiler', 'AI Quantizer', lhead='cluster_8')
             v.edge('Xilinx Runtime Library',
                    'Deep Learning Processing Unit', lhead='cluster_9')
-            # v.edge('AI Profiler', 'Vitis Accellerated Libraries',
-            #        style='invisible', dir="none")
-            # v.edge('Vitis Accellerated Libraries', 'Xilinx Runtime Library',
-            #        style='invisible', dir="none")
 
             v.attr(label='Vitis')
 
@@ -170,12 +156,12 @@ if __name__ == "__main__":
     file_choices = ['svg', 'png', 'pdf']
     line_choices = ['line', 'polyline', 'curved', 'spline', 'ortho']
     filename = base_dir+args.filename
-    format = args.output_format
+    fmt = args.output_format
 
     print(base_dir+args.filename)
-    g = draw_graph(format=args.output_format, filename=filename,
+    g = draw_graph(format=fmt, filename=filename,
                    spline_type=args.line_type)
 
     g.save()
-    g.render(filename=filename, format=format,
+    g.render(filename=filename, format=fmt,
              view=True if args.show == 'y' else False)
