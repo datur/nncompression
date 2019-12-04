@@ -30,7 +30,7 @@
 
 ### A survey of model compression and acceleration for deep neural networks
 
-### Pruning neural networks: is it time to nip it in the bud?
+### Pruning neural networks: is it time to nip it in the bud
 
 ### The lottery ticket hypothesis: Finding sparse, trainable neural networks
 
