@@ -6,9 +6,9 @@ import os
 base_dir = os.path.dirname(os.path.realpath(__file__))
 
 
-def draw_graph(format, filename, spline_type):
+def draw_graph(fmt, filename, spline_type):
 
-    g = Digraph('Current State of FPGA Deployment of Neural Networks', filename=filename, format=format,
+    g = Digraph('Current State of FPGA Deployment of Neural Networks', filename=filename, format=fmt,
                 graph_attr={'splines': spline_type, 'overlap': 'false', 'concentrate': 'true'})
     g.node_attr.update(shape='box', color='black')
     g.attr(compound='true')
