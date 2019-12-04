@@ -51,4 +51,6 @@ Current State of Neural Network Compression and Deployment
 
 ## References
 
+### Papers Im Reading
+[Link](papers/README.md)
 List of papers on pruning: [Link](https://github.com/he-y/Awesome-Pruning)
