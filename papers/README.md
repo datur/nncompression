@@ -36,4 +36,4 @@
 
 ### Quantized neural networks: Training neural networks with low precision weights and activations
 
-### o prune, or not to prune: exploring the efficacy of pruning for model compression
+### To prune, or not to prune: exploring the efficacy of pruning for model compression
