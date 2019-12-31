@@ -6,6 +6,8 @@ Han et al.
 
 ## Key Points
 
+They propose Deep Compression, a 3 stage pipeline
+
 ## Contributions
 
 ## Critiques
