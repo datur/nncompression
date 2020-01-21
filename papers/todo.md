@@ -28,3 +28,17 @@ https://arxiv.org/pdf/2001.00281.pdf
 https://arxiv.org/pdf/1906.04721.pdf
 https://github.com/amirgholami/ZeroQ
 https://towardsdatascience.com/everything-you-need-to-know-about-automl-and-neural-architecture-search-8db1863682bf
+
+What i want to do:
+
+Use Resnet variant network, either pretrained or trained from scratch
+Evaluate pruning and quantization methods on either imagenet, cifar 100 or cifar 10
+Evaluation hardware is comparing neural compute stick and gpu? 
+Could latency be evaluated using a VPS with GPU for inference and comparing to NCS2
+
+
+Questions for rob:
+
+What referencing Style would you prefer?
+Are we allowed any aws credits? or do we have access to gpu server?
+
