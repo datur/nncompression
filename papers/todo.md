@@ -43,3 +43,5 @@ Questions for rob:
 What referencing Style would you prefer?
 Are we allowed any aws credits? or do we have access to gpu server?
 
+https://www.one-tab.com/page/bEgfjDcZRIWzYqS_kUkzFQ
+https://www.one-tab.com/page/MCLFFVPTRyaHDYQ4HCBmKQ
