@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>savePoint</key>
+	<dict>
+		<key>documentModificationDate</key>
+		<date>2020-01-24T15:17:41Z</date>
+		<key>reversionPointsByLogID</key>
+		<dict>
+			<key>rkkvW4ixQN6JHXLNCmgbHg</key>
+			<dict>
+				<key>branchHeads</key>
+				<dict>
+					<key>masterBranch</key>
+					<string>-7VU11_wlLAy9tFnoHbg05uM2J4</string>
+					<key>userBranches</key>
+					<dict>
+						<key>PORb4rlxRZO3L5NxyS7YOw</key>
+						<dict>
+							<key>public</key>
+							<string>-7VU11_wlLAy9tFnoHbg05uM2J4</string>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<key>timestamp</key>
+		<date>2020-01-24T15:17:41Z</date>
+		<key>workarea</key>
+		<string>public</string>
+	</dict>
+	<key>userNames</key>
+	<dict>
+		<key>root</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

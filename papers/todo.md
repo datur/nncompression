@@ -36,6 +36,7 @@ Evaluate pruning and quantization methods on either imagenet, cifar 100 or cifar
 Evaluation hardware is comparing neural compute stick and gpu? 
 Could latency be evaluated using a VPS with GPU for inference and comparing to NCS2
 
+AWS Cost per hour either $3 - $24 for on demand per hour or $1-$7 per hour for spot pricing
 
 Questions for rob:
 
