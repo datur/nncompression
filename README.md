@@ -59,3 +59,4 @@ Current State of Neural Network Compression and Deployment
 ### Papers on pruning
 
 List of papers on pruning: [Link](https://github.com/he-y/Awesome-Pruning)
+Other Collection of compression techniques [link](https://github.com/cedrickchee/awesome-ml-model-compression)
