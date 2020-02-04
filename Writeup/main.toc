@@ -16,7 +16,7 @@
 \contentsline {subsubsection}{\numberline {2.1.2.3}Embedded GPUs}{3}{subsubsection.18}
 \contentsline {subsubsection}{\numberline {2.1.2.4}Smart Home}{3}{subsubsection.19}
 \contentsline {subsubsection}{\numberline {2.1.2.5}Edge Custom Solutions}{3}{subsubsection.20}
-\contentsline {section}{\numberline {2.2}Compression Techniques}{4}{section.21}
+\contentsline {section}{\numberline {2.2}Model Compression Techniques}{4}{section.21}
 \contentsline {subsection}{\numberline {2.2.1}Methods/Algorithms}{4}{subsection.22}
 \contentsline {subsubsection}{\numberline {2.2.1.1}Pruning}{4}{subsubsection.23}
 \contentsline {subsubsection}{\numberline {2.2.1.2}Quantization}{4}{subsubsection.24}
@@ -28,19 +28,26 @@
 \contentsline {subsubsection}{\numberline {2.2.2.2}FINN}{5}{subsubsection.31}
 \contentsline {subsubsection}{\numberline {2.2.2.3}Intel OpenVino}{5}{subsubsection.32}
 \contentsline {subsubsection}{\numberline {2.2.2.4}Xilinx Vitis}{5}{subsubsection.33}
-\contentsline {chapter}{\numberline {3}Requirements Analysis}{6}{chapter.34}
-\contentsline {section}{\numberline {3.1}Research Questions}{6}{section.35}
-\contentsline {section}{\numberline {3.2}hypothesis}{6}{section.36}
-\contentsline {section}{\numberline {3.3}Aim}{6}{section.37}
-\contentsline {section}{\numberline {3.4}Objectives}{6}{section.38}
-\contentsline {section}{\numberline {3.5}Project Goals}{6}{section.39}
-\contentsline {subsection}{\numberline {3.5.1}Functional Requirements}{7}{subsection.40}
-\contentsline {subsection}{\numberline {3.5.2}Non Functional Requirements}{7}{subsection.41}
-\contentsline {section}{\numberline {3.6}Deliverables and tasks}{7}{section.42}
-\contentsline {chapter}{\numberline {4}Methodology}{8}{chapter.43}
-\contentsline {chapter}{\numberline {5}Project Plan}{9}{chapter.44}
-\contentsline {section}{\numberline {5.1}Gantt Chart}{9}{section.45}
-\contentsline {section}{\numberline {5.2}Risk Analysis}{9}{section.46}
+\contentsline {section}{\numberline {2.3}Inference on edge devices}{5}{section.34}
+\contentsline {subsection}{\numberline {2.3.1}offloading edge inference}{5}{subsection.35}
+\contentsline {section}{\numberline {2.4}benchmarking Neural networks}{5}{section.36}
+\contentsline {subsection}{\numberline {2.4.1}Image classification}{5}{subsection.37}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Datasets}{5}{subsubsection.38}
+\contentsline {subsection}{\numberline {2.4.2}Object Detection}{5}{subsection.39}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Datasets}{5}{subsubsection.40}
+\contentsline {chapter}{\numberline {3}Requirements Analysis}{6}{chapter.41}
+\contentsline {section}{\numberline {3.1}Research Questions}{6}{section.42}
+\contentsline {section}{\numberline {3.2}hypothesis}{6}{section.43}
+\contentsline {section}{\numberline {3.3}Aim}{6}{section.44}
+\contentsline {section}{\numberline {3.4}Objectives}{6}{section.45}
+\contentsline {section}{\numberline {3.5}Project Goals}{6}{section.46}
+\contentsline {subsection}{\numberline {3.5.1}Functional Requirements}{7}{subsection.47}
+\contentsline {subsection}{\numberline {3.5.2}Non Functional Requirements}{7}{subsection.48}
+\contentsline {section}{\numberline {3.6}Deliverables and tasks}{7}{section.49}
+\contentsline {chapter}{\numberline {4}Methodology}{8}{chapter.50}
+\contentsline {chapter}{\numberline {5}Project Plan}{9}{chapter.51}
+\contentsline {section}{\numberline {5.1}Gantt Chart}{9}{section.52}
+\contentsline {section}{\numberline {5.2}Risk Analysis}{9}{section.53}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{10}{dummy.47}
+\contentsline {chapter}{Bibliography}{10}{dummy.54}
