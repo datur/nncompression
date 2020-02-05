@@ -14,12 +14,12 @@ test_dir = 'datasets/cifar10/test'
 train_loader = pytorch.data_loader(train_dir)
 test_loader = pytorch.data_loader(test_dir)
 
-epochs = 1
+epochs = 2
 
 net = pytorch.SimpleCNN()
 
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(net.parameters(), lr=0.01)
+optimizer = optim.Adam(net.parameters(), lr=0.001)
 
 net.train(train_loader=train_loader, criterion=criterion,
           optimizer=optimizer, epochs=epochs)

@@ -4,6 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
 import torch.optim as optim
+from torch.utils.tensorboard import SummaryWriter
 
 
 def data_loader(path, batch_size=10):
@@ -72,6 +73,7 @@ class SimpleCNN(nn.Module):
 
         so if a max pooling filter of stride 2 and width 2 and no padding the image width is halved
     """
+    
 
     def __init__(self):
         super(SimpleCNN, self).__init__()
@@ -102,8 +104,10 @@ class SimpleCNN(nn.Module):
 
     def train(self, train_loader, criterion, optimizer, epochs):
         print('Starting Training')
+        writer = SummaryWriter('runs/cifar10_simpleCNN')
+        running_loss = 0.0
         for epoch in range(epochs):
-            running_loss = 0.0
+            correct = 0
             for i, data in enumerate(train_loader, 0):
 
                 inputs, labels = data
@@ -114,10 +118,20 @@ class SimpleCNN(nn.Module):
                 loss.backward()
                 optimizer.step()
 
+                correct += (outs == labels).float().sum()
+                
                 running_loss += loss.item()
-                if i % 250 == 249:    # print every 2000 mini-batches
-                    print('[%d, %5d] loss: %.3f' %
-                          (epoch + 1, i + 1, running_loss / 250))
+
+                if i % 100 == 99:    # print every 100 mini-batches
+                    # ...log the running loss
+                    print(f'epoch: {epoch} Mini batch: {i +1} / {len(train_loader)}')
+                    writer.add_scalar('training loss',
+                                    running_loss / 100,
+                                    epoch * len(train_loader) + i)
                     running_loss = 0.0
+            
+            accuracy = 100 * correct / len(train_loader)
+
+            print("Accuracy = {}".format(accuracy))
 
         print('Finished Training')
