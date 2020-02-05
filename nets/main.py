@@ -17,6 +17,7 @@ test_loader = pytorch.data_loader(test_dir)
 epochs = 2
 
 net = pytorch.SimpleCNN()
+print(net)
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(net.parameters(), lr=0.001)

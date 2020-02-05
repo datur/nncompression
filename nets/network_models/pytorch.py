@@ -68,7 +68,7 @@ class SimpleCNN(nn.Module):
     """
     Calculating the image size after a pooling function =
 
-        W_out = (W_in - poolingfilter_size + 2 * poolingfilter_padding)/
+        W_out = (W_in - filter_size + 2 * poolingfilter_padding)/
                 (poolingfilter_stride)                                       + 1
 
         so if a max pooling filter of stride 2 and width 2 and no padding the image width is halved
@@ -76,53 +76,56 @@ class SimpleCNN(nn.Module):
 
     def __init__(self):
         super(SimpleCNN, self).__init__()
-        self.conv1 = nn.Conv2d(
-            in_channels=3, out_channels=64, kernel_size=5, stride=1, padding=1)
-        self.bn1 = nn.BatchNorm2d(64)
 
-        self.conv2 = nn.Conv2d(
-            in_channels=64, out_channels=128, kernel_size=5, stride=1, padding=1)
-        self.bn2 = nn.BatchNorm2d(128)
+        self.layer_conv1 = nn.Sequential(
+            nn.Conv2d(in_channels=3, out_channels=32,
+                      kernel_size=5, stride=1, padding=2),
+            nn.MaxPool2d(2, 2),
+            nn.LeakyReLU()
+        )
 
-        self.conv3 = nn.Conv2d(128, 256, 5, 1, 1)
-        self.bn3 = nn.BatchNorm2d(256)
+        self.layer_conv2 = nn.Sequential(
+            nn.Conv2d(in_channels=32, out_channels=64,
+                      kernel_size=5, stride=1, padding=2),
+            nn.MaxPool2d(2, 2),
+            nn.LeakyReLU()
+        )
 
-        self.pool = nn.MaxPool2d(2, 2)
-        self.ReLU = nn.ReLU(inplace=True)
-        self.tanh = nn.Tanh()
+        self.layer_conv3 = nn.Sequential(
+            nn.Conv2d(in_channels=64, out_channels=128,
+                      kernel_size=5, stride=1, padding=2),
+            nn.MaxPool2d(2, 2),
+            nn.LeakyReLU()
+        )
 
-        self.fc1 = nn.Linear(in_features=256*4*4, out_features=1000)
-        self.fc2 = nn.Linear(in_features=1000, out_features=10)
+        self.fc1_a = nn.Sequential(
+            nn.Linear(128*4*4, 100),
+            nn.LeakyReLU()
+        )
+        self.fc2_a = nn.Sequential(
+            nn.Linear(100, 10)
+        )
 
     def forward(self, input):
-        out = self.conv1(input)
-        out = self.bn1(out)
-        out = self.pool(out)
-        out = self.ReLU(out)
+        out = self.layer_conv1(input)
 
-        out = self.conv2(out)
-        out = self.bn2(out)
-        out = self.pool(out)
-        out = self.ReLU(out)
+        out = self.layer_conv2(out)
 
-        out = self.conv3(out)
-        out = self.bn3(out)
-        out = self.pool(out)
-        out = self.ReLU(out)
+        out = self.layer_conv3(out)
 
         out = out.reshape(out.size(0), -1)
 
-        out = self.fc1(out)
-        out = self.tanh(out)
+        out = self.fc1_a(out)
 
-        x = self.fc2(out)
+        x = self.fc2_a(out)
         return x
 
     def train(self, train_loader, criterion, optimizer, epochs):
         print('Starting Training')
         writer = SummaryWriter(
-            f'runs/cifar10_{"simpleCNN"}_tanhlinearActivation_2fc')
+            f'runs/cifar10_simpleCNN_wide_fc4')
         running_loss = 0.0
+        running_error = 0.0
         for epoch in range(epochs):
             for i, data in enumerate(train_loader, 0):
 
@@ -135,18 +138,23 @@ class SimpleCNN(nn.Module):
                 optimizer.step()
 
                 running_loss += loss.item()
+                running_error += error_criterion(outs, labels)
 
-                if i % 100 == 99:    # print every 100 mini-batches
+                if i % 500 == 499:    # print every 1000 mini-batches
                     # ...log the running loss
-                    print(
-                        f'epoch: {epoch} Mini batch: {i +1} / {len(train_loader)}')
+
                     writer.add_scalar('training loss',
-                                      running_loss / 100,
+                                      running_loss / 500,
                                       epoch * len(train_loader) + i)
 
-                    writer.add_scalar('error', error_criterion(
-                        outs, labels), epoch * len(train_loader) + i)
+                    writer.add_scalar(
+                        'training error', running_error/500, epoch * len(train_loader) + i)
+
+                    print(
+                        f'epoch: {epoch} / {epochs} | Mini batch: {i +1} / {len(train_loader)} | training_loss: {running_loss / 500} | training_error: {running_error/500}')
+
                     running_loss = 0.0
+                    running_error = 0.0
 
         print('Finished Training')
 
