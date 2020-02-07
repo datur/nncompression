@@ -14,7 +14,7 @@ def data_loader(path, batch_size=10, mean=None, std=None):
         root=path, transform=transform)
 
     dataset_loader = torch.utils.data.DataLoader(
-        dataset=dataset, batch_size=batch_size, shuffle=False
+        dataset=dataset, batch_size=batch_size, shuffle=True
     )
     return dataset_loader
 

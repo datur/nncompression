@@ -144,6 +144,9 @@ class SimpleCNN(nn.Module):
 
         print('Finished Training')
 
+    def test(self, test_loader):
+        pass
+
 
 def error_criterion(outputs, labels):
     _, max_indices = torch.max(outputs, 1)

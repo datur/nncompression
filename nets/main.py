@@ -17,7 +17,8 @@ device = torch.device(f'cuda:0' if torch.cuda.is_available() else 'cpu')
 with open('config.yaml') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 
-print(f'Using {device.type} device {torch.cuda.get_device_name() if torch.cuda.is_available() else ""} on the {config['locations']['dataset']} dataset')
+print(
+    f'Using {device.type} device{torch.cuda.get_device_name() if torch.cuda.is_available() else ""} on the {config["locations"]["dataset"]} dataset')
 
 
 train_dir = config['locations']['train']
@@ -51,6 +52,8 @@ optimizer = optim.Adam(net.parameters(), lr=0.001)
 
 net.train(train_loader=train_loader, criterion=criterion,
           optimizer=optimizer, epochs=epochs, device=device)
+
+net.test()
 
 with open('config.yaml', 'w') as f:
     yaml.dump(config, f)
