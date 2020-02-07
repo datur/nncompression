@@ -7,21 +7,6 @@ import torch.optim as optim
 from torch.utils.tensorboard import SummaryWriter
 
 
-def data_loader(path, batch_size=10):
-
-    transform = torchvision.transforms.Compose(
-        [torchvision.transforms.ToTensor(),
-         torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-
-    dataset = torchvision.datasets.ImageFolder(
-        root=path, transform=transform)
-
-    dataset_loader = torch.utils.data.DataLoader(
-        dataset=dataset, batch_size=batch_size, shuffle=True
-    )
-    return dataset_loader
-
-
 class SimpleNet(nn.Module):
     def __init__(self):
         super(SimpleNet, self).__init__()
