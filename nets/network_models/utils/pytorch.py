@@ -2,11 +2,13 @@ import torchvision
 import torch
 
 
-def data_loader(path, batch_size=10):
+def data_loader(path, batch_size=10, mean=None, std=None):
     # torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-    transform = torchvision.transforms.Compose(
-        [torchvision.transforms.ToTensor(),
-         ])
+    transforms = [torchvision.transforms.ToTensor()]
+    if mean is not None and std is not None:
+        transforms.append(torchvision.transforms.Normalize(mean, std))
+
+    transform = torchvision.transforms.Compose(transforms)
 
     dataset = torchvision.datasets.ImageFolder(
         root=path, transform=transform)
@@ -17,26 +19,24 @@ def data_loader(path, batch_size=10):
     return dataset_loader
 
 
-def get_normalized_dataset_vals(data_loader):
+def get_normalized_dataset_vals(path):
     '''
         method created using this resource
         https://discuss.pytorch.org/t/computing-the-mean-and-std-of-dataset/34949/2
     '''
     mean = 0.
     std = 0.
-    nb_samples = 0.
-    for data in data_loader:
+    d_loader = data_loader(path)
+    for data in d_loader:
         """
         always will be data[0] as data[1] is labels
-        loop through data[0][i] - this is each image in the batch
-        data[0][i][j] is the channel
         """
         batch_samples = data[0].size(0)
         data = data[0].view(batch_samples, data[0].size(1), -1)
         mean += data.mean(2).sum(0)
         std += data.std(2).sum(0)
 
-    mean /= len(data_loader.dataset)
-    print(mean)
-    std /= len(data_loader.dataset)
-    print(std)
+    mean /= len(d_loader.dataset)
+    std /= len(d_loader.dataset)
+
+    return tuple(mean.tolist()), tuple(std.tolist())

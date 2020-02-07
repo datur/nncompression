@@ -5,24 +5,52 @@ import matplotlib.pyplot as plt
 import torch.optim as optim
 import torch.functional as F
 import torch.nn as nn
+import torch
+import yaml
 
 labels = ['airplane', 'automobile', 'bird',
           'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
-train_dir = 'datasets/cifar10/train'
-test_dir = 'datasets/cifar10/test'
+device = torch.device(f'cuda:0' if torch.cuda.is_available() else 'cpu')
 
-train_loader = ptu.data_loader(train_dir)
-ptu.get_normalized_dataset_vals(train_loader)
-test_loader = ptu.data_loader(test_dir)
 
-# epochs = 2
+with open('config.yaml') as f:
+    config = yaml.load(f, Loader=yaml.FullLoader)
 
-# net = pytorch.SimpleCNN()
-# print(net)
+print(f'Using {device.type} device {torch.cuda.get_device_name() if torch.cuda.is_available() else ""} on the {config['locations']['dataset']} dataset')
 
-# criterion = nn.CrossEntropyLoss()
-# optimizer = optim.Adam(net.parameters(), lr=0.001)
 
-# net.train(train_loader=train_loader, criterion=criterion,
-#           optimizer=optimizer, epochs=epochs)
+train_dir = config['locations']['train']
+test_dir = config['locations']['test']
+
+
+if any([config['dataset_meta']['train'][x] == None for x in config['dataset_meta']['train']]):
+    print('No mean or std for training data. Calculating now...')
+    config['dataset_meta']['train']['mean'], config['dataset_meta']['train']['std'] = ptu.get_normalized_dataset_vals(
+        config['locations']['train'])
+
+if any([config['dataset_meta']['test'][x] == None for x in config['dataset_meta']['test']]):
+    print('No mean or std for testing data. Calculating now...')
+    config['dataset_meta']['test']['mean'], config['dataset_meta']['test']['std'] = ptu.get_normalized_dataset_vals(
+        config['locations']['test'])
+
+train_loader = ptu.data_loader(
+    train_dir, mean=config['dataset_meta']['train']['mean'], std=config['dataset_meta']['train']['std'])
+test_loader = ptu.data_loader(
+    test_dir, mean=config['dataset_meta']['test']['mean'], std=config['dataset_meta']['test']['std'])
+
+epochs = 10
+
+net = pytorch.SimpleCNN()
+print(net)
+
+net.to(device)
+
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(net.parameters(), lr=0.001)
+
+net.train(train_loader=train_loader, criterion=criterion,
+          optimizer=optimizer, epochs=epochs, device=device)
+
+with open('config.yaml', 'w') as f:
+    yaml.dump(config, f)

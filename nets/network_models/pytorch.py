@@ -105,7 +105,7 @@ class SimpleCNN(nn.Module):
         x = self.fc2_a(out)
         return x
 
-    def train(self, train_loader, criterion, optimizer, epochs):
+    def train(self, train_loader, criterion, optimizer, epochs, device):
         print('Starting Training')
         writer = SummaryWriter(
             f'runs/cifar10_simpleCNN_wide_fc4')
@@ -115,6 +115,7 @@ class SimpleCNN(nn.Module):
             for i, data in enumerate(train_loader, 0):
 
                 inputs, labels = data
+                inputs, labels = inputs.to(device), labels.to(device)
 
                 self.zero_grad()
                 outs = self(inputs)
