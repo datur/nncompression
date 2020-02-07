@@ -160,6 +160,6 @@ class SimpleCNN(nn.Module):
 
 
 def error_criterion(outputs, labels):
-    max_vals, max_indices = torch.max(outputs, 1)
+    _, max_indices = torch.max(outputs, 1)
     train_error = (max_indices != labels).float().sum()/max_indices.size()[0]
     return train_error
