@@ -7,6 +7,7 @@ import torch.functional as F
 import torch.nn as nn
 import torch
 import yaml
+from torch.utils.tensorboard import SummaryWriter
 
 labels = ['airplane', 'automobile', 'bird',
           'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
@@ -40,20 +41,32 @@ train_loader = ptu.data_loader(
 test_loader = ptu.data_loader(
     test_dir, mean=config['dataset_meta']['test']['mean'], std=config['dataset_meta']['test']['std'])
 
-epochs = 10
+epochs = 3
 
-net = pytorch.SimpleCNN()
-print(net)
+net = pytorch.DeeperCNN()
+
+dataiter = iter(train_loader)
+images, labels = dataiter.next()
+
+net(images)
+
+run_name = 'deeperCNN_BN'
+
+with SummaryWriter(log_dir=f'runs/{run_name}') as w:
+    w.add_graph(net, images)
 
 net.to(device)
 
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(net.parameters(), lr=0.001)
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 
-net.train(train_loader=train_loader, criterion=criterion,
-          optimizer=optimizer, epochs=epochs, device=device)
+pytorch.train(net, train_loader, criterion, optimizer,
+              epochs, device, run_name)
 
-net.test()
+# net.train(train_loader=train_loader, criterion=criterion,
+#           optimizer=optimizer, epochs=epochs, device=device)
+
+# net.test()
 
 with open('config.yaml', 'w') as f:
     yaml.dump(config, f)
