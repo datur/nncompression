@@ -3,8 +3,29 @@ import torch
 
 
 def data_loader(path, batch_size=10, mean=None, std=None):
-    # torchvision.transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-    transforms = [torchvision.transforms.ToTensor()]
+    """
+    A function that creates a dataloader for the root directory of a dataset split such as train, test, or validation.
+    This function also applies some transforms on the data such as normalizing the data and converting the image to a tensor.
+
+    Arguments:
+        path {str} -- path to root folder of a subset of dataset ie. ../datasets/cifar10/train
+
+    Keyword Arguments:
+        batch_size {int} -- the size of each batch in the train loader (default: {10})
+        mean {tuple} -- tuple containing the mean of each colour channel in the images (default: {None})
+        std {tuple} -- tuple containing the standard devication of each colour channel in the dataset (default: {None})
+
+    Returns:
+        torch.utils.data.DataLoader -- an innitialised dataloader object containing len(dataset)/batch_size batches
+    """
+
+    transforms = [torchvision.transforms.RandomResizedCrop(32),
+                  torchvision.transforms.RandomRotation(10),
+                  torchvision.transforms.RandomHorizontalFlip(),
+                  torchvision.transforms.RandomVerticalFlip(),
+                  torchvision.transforms.RandomPerspective(),
+                  torchvision.transforms.ToTensor()
+                  ]
     if mean is not None and std is not None:
         transforms.append(torchvision.transforms.Normalize(mean, std))
 
