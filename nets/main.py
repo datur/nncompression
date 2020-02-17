@@ -41,7 +41,7 @@ train_loader = ptu.data_loader(
 test_loader = ptu.data_loader(
     test_dir, mean=config['dataset_meta']['test']['mean'], std=config['dataset_meta']['test']['std'])
 
-epochs = 3
+epochs = 10
 
 net = pytorch.DeeperCNN()
 
