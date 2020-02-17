@@ -1,6 +1,9 @@
 import torchvision
 import torch
 
+labels = ['airplane', 'automobile', 'bird',
+          'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+
 
 def data_loader(path, batch_size=10, mean=None, std=None):
     """
@@ -20,8 +23,6 @@ def data_loader(path, batch_size=10, mean=None, std=None):
     """
     # `torchvision.transforms.RandomPerspective(),`torchvision.transforms.RandomResizedCrop(32), torchvision.transforms.RandomRotation(10),
     transforms = [
-        torchvision.transforms.RandomHorizontalFlip(),
-        torchvision.transforms.RandomVerticalFlip(),
         torchvision.transforms.ToTensor()
     ]
     if mean is not None and std is not None:
