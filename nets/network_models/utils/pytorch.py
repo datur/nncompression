@@ -18,14 +18,12 @@ def data_loader(path, batch_size=10, mean=None, std=None):
     Returns:
         torch.utils.data.DataLoader -- an innitialised dataloader object containing len(dataset)/batch_size batches
     """
-
-    transforms = [torchvision.transforms.RandomResizedCrop(32),
-                  torchvision.transforms.RandomRotation(10),
-                  torchvision.transforms.RandomHorizontalFlip(),
-                  torchvision.transforms.RandomVerticalFlip(),
-                  torchvision.transforms.RandomPerspective(),
-                  torchvision.transforms.ToTensor()
-                  ]
+    # `torchvision.transforms.RandomPerspective(),`torchvision.transforms.RandomResizedCrop(32), torchvision.transforms.RandomRotation(10),
+    transforms = [
+        torchvision.transforms.RandomHorizontalFlip(),
+        torchvision.transforms.RandomVerticalFlip(),
+        torchvision.transforms.ToTensor()
+    ]
     if mean is not None and std is not None:
         transforms.append(torchvision.transforms.Normalize(mean, std))
 
