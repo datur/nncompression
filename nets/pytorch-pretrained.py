@@ -84,13 +84,17 @@ if __name__ == "__main__":
     # test_loader = data_loader('datasets/cifar10/test',
     #                           mean=[0.4914, 0.4822, 0.4465], std=[0.2023, 0.1994, 0.2010])
 
-    total_accuracy(test_loader=test_loader, net=inception, device=device)
+    # total_accuracy(test_loader=test_loader, net=inception, device=device)
 
-    class_accuracy(test_loader, inception, device)
+    # class_accuracy(test_loader, inception, device)
 
     print('start onnx conversion')
     batch_size = 10
+
+    inception.to(device)
     x = torch.randn(batch_size, 3, 32, 32, requires_grad=True)
+    # FIGURE THIS OUT
+    x.to(device)
     torch_out = inception(x)
 
     torch.onnx.export(inception, x, 'inceptionv3.onnx', export_params=True,
