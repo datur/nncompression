@@ -39,3 +39,5 @@ Thumbs.db
 
 *.pyc
 __pycache__
+
+nets/PyTorch_CIFAR10/cifar10_models/state_dicts
