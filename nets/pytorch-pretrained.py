@@ -10,6 +10,29 @@ import torch.onnx
 import onnx
 import onnxruntime
 import numpy as np
+from torchsummary import summary
+
+"""References
+
+https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html
+"""
+
+
+def onnx_total_accuracy(ort_session, test_loader):
+    correct = 0
+    total = 0
+    for data in tqdm(test_loader):
+        images, labels = data
+
+        ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(images)}
+        ort_outs = ort_session.run(None, ort_inputs)
+
+        predicted = np.argmax(ort_outs[0], 1)
+        total += labels.size(0)
+        correct += (predicted == to_numpy(labels)).sum().item()
+
+    print('Accuracy of the network on the 10000 test images: %d %%' % (
+        100 * correct / total))
 
 
 def total_accuracy(test_loader, net, device):
@@ -79,6 +102,8 @@ if __name__ == "__main__":
 
     inception = inception.inception_v3(pretrained=True, device=device)
 
+    print(summary(inception, (3, 32, 32)))
+
     inception.eval()
 
     # test_loader = data_loader('datasets/cifar10/test',
@@ -92,13 +117,14 @@ if __name__ == "__main__":
     batch_size = 10
 
     inception.to(device)
-    x = torch.randn(batch_size, 3, 32, 32, requires_grad=True)
-    # FIGURE THIS OUT
-    x.to(device)
+    images, labels = iter(test_loader).next()
+
+    x = images.to(device)
+
     torch_out = inception(x)
 
     torch.onnx.export(inception, x, 'inceptionv3.onnx', export_params=True,
-                      opset_version=11, do_constant_folding=True, input_names=['input'],
+                      opset_version=10, do_constant_folding=True, input_names=['input'],
                       output_names=['output'],
                       dynamic_axes={'input': {0: 'batch_size'},
                                     'output': {0: 'batch_size'}})
@@ -112,8 +138,12 @@ if __name__ == "__main__":
     ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(x)}
     ort_outs = ort_session.run(None, ort_inputs)
 
+    # print(ort_outs)
+
     # compare ONNX Runtime and PyTorch results
     np.testing.assert_allclose(
         to_numpy(torch_out), ort_outs[0], rtol=1e-03, atol=1e-05)
 
     print("Exported model has been tested with ONNXRuntime, and the result looks good!")
+
+    onnx_total_accuracy(ort_session, test_loader)
