@@ -193,6 +193,14 @@
         <span class="p">)</span>
 
 <div class="viewcode-block" id="SimpleCNN.forward"><a class="viewcode-back" href="../../../nncompression.models.html#nncompression.models.simple_cnn.SimpleCNN.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Defines forward pass of the network</span>
+
+<span class="sd">        :param input: The input for the network</span>
+<span class="sd">        :type input: torch.tensor</span>
+<span class="sd">        :return: class predictions</span>
+<span class="sd">        :rtype: torch.tensor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_conv1</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
 
