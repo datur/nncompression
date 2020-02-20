@@ -2,6 +2,15 @@
 
 # Masters Thesis
 
+TODO
+
+--------
+
+- Finish moving previous folder into new module
+- Find a way to programatically use openvino model optimizer - should it be through an include or a sym link?
+- write methods for compressing networks
+- explore NCS2 python tools for model performance statistics
+
 ## Neural Network Compression
 
 Current State of Neural Network Compression and Deployment
@@ -60,3 +69,4 @@ Current State of Neural Network Compression and Deployment
 
 List of papers on pruning: [Link](https://github.com/he-y/Awesome-Pruning)
 Other Collection of compression techniques [link](https://github.com/cedrickchee/awesome-ml-model-compression)
+
