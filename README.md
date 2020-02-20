@@ -13,10 +13,6 @@ TODO
 
 ## Neural Network Compression
 
-Current State of Neural Network Compression and Deployment
-
-![Current State of Neural Network Compression and Deployment](diagram/diagram.png)
-
 ## Tools
 
 ### Model Description Libraries
@@ -63,7 +59,7 @@ Current State of Neural Network Compression and Deployment
 
 ### Papers Im Reading
 
-[Link](papers/README.md)
+[Papers im Reading](papers/README.md)
 
 ### Papers on pruning
 

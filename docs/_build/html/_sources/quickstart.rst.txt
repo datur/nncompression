@@ -3,4 +3,4 @@ Quickstart
 
 Usage:
 
-to use do this
+To use this module...

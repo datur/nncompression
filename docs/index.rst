@@ -8,7 +8,10 @@ Welcome to nncompression's documentation!
 
 .. mdinclude::
     ../README.md
-    
+
+.. image:: ../diagram/diagram.png
+    :width: 600
+    :alt: Current State of Neural Network Compression
 
 .. toctree::
    :maxdepth: 2

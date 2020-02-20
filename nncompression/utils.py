@@ -1,3 +1,8 @@
+"""
+Module containing utility functions for the Models module
+
+"""
+
 
 def to_numpy(tensor):
     """[summary]
