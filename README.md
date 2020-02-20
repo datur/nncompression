@@ -15,7 +15,7 @@ TODO
 
 Current State of Neural Network Compression and Deployment
 
-![Current State of Neural Network Compression and Deployment](diagram/diagram.gv.png)
+![Current State of Neural Network Compression and Deployment](diagram/diagram.png)
 
 ## Tools
 
