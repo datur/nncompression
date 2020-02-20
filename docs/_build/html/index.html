@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to nncompression’s documentation! &mdash; nncompression 0.01 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quickstart" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> nncompression
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">nncompression</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">nncompression</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to nncompression’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-nncompression-s-documentation">
+<h1>Welcome to nncompression’s documentation!<a class="headerlink" href="#welcome-to-nncompression-s-documentation" title="Permalink to this headline">¶</a></h1>
+<a class="reference external image-reference" href="https://www.codacy.com/manual/davidpaulturner350/nncompression?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=davidturner94/nncompression&amp;amp;utm_campaign=Badge_Grade"><img alt="Codacy Badge" src="https://api.codacy.com/project/badge/Grade/9d9f3d81e1f54697a166253a14c7dde5" /></a>
+</div>
+<div class="section" id="masters-thesis">
+<h1>Masters Thesis<a class="headerlink" href="#masters-thesis" title="Permalink to this headline">¶</a></h1>
+<p>TODO</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Finish moving previous folder into new module</p></li>
+<li><p>Find a way to programatically use openvino model optimizer - should it be through an include or a sym link?</p></li>
+<li><p>write methods for compressing networks</p></li>
+<li><p>explore NCS2 python tools for model performance statistics</p></li>
+</ul>
+<div class="section" id="neural-network-compression">
+<h2>Neural Network Compression<a class="headerlink" href="#neural-network-compression" title="Permalink to this headline">¶</a></h2>
+<p>Current State of Neural Network Compression and Deployment</p>
+<a class="reference external image-reference" href="diagram/diagram.gv.png"><img alt="Current State of Neural Network Compression and Deployment" src="diagram/diagram.gv.png" /></a>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="model-description-libraries">
+<h3>Model Description Libraries<a class="headerlink" href="#model-description-libraries" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Library</p></th>
+<th class="head"><p>Maintainer</p></th>
+<th class="head"><p>Desc</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://pytorch.org/">PyTorch</a></p></td>
+<td><p>Facebook</p></td>
+<td><p>Facebook backed and Open Source. Dynamic Computational graph</p></td>
+<td><p>Actively Developed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a></p></td>
+<td><p>Google</p></td>
+<td><p>Google Backed. Tensorflow Lite for Mobile Deployment. Python and C++. Static graph</p></td>
+<td><p>Actively Developed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://keras.io/">Keras</a></p></td>
+<td><p>François Chollet/Google</p></td>
+<td><p>Google Employee François Cholle developed. Great for quick prototyping. Wrapper for Tensorflow, Theano, CNTK. It is tightly integrated with tensorflow 2</p></td>
+<td><p>Active</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.microsoft.com/en-gb/cognitive-toolkit/">CNTK</a></p></td>
+<td><p>Microsoft</p></td>
+<td><p>toolkit that describes neural networks as a series of computational steps via a directed graph</p></td>
+<td><p>Depreciated</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://onnx.ai/">ONNX</a></p></td>
+<td><p>Joint Venture between Facebook and Microsoft.</p></td>
+<td><p>Wide spread enterprise use. Multiple libraries convert to universal Model. Interchangable AI Models</p></td>
+<td><p>Actively Developed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://mxnet.apache.org/">MxNet</a></p></td>
+<td><p>Apache</p></td>
+<td><p>Has wide Industry support and a large community of users. Focus on scalability over multiple GPUs and portability with large number of languages supported and most major OS supported. Has libraries expanding on core functionality for NLP and CV <a class="reference external" href="https://github.com/apache/incubator-mxnet">Repo</a></p></td>
+<td><p>Actively Developed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://chainer.org/">Chainer</a></p></td>
+<td><p>Community, Preferred Networks, Inc.</p></td>
+<td><p>open source deep learning framework written purely in Python on top of Numpy and CuPy. First to use “define-by-run”(dynamic computational graph) and focuses on object oriented design for defining neural networks.</p></td>
+<td><p>Actively Developed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://caffe.berkeleyvision.org/">Caffe</a></p></td>
+<td><p>UC Berkley</p></td>
+<td><p>expression, Focus on speed, and modularity. Last stable release over 2 years ago. However, it is still supported by many pruning and deployment libraries so still used in industry.</p></td>
+<td><p>Depreciated</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://caffe2.ai/">Caffe2</a></p></td>
+<td><p>Facebook - Merged with PyTorch as of 2018</p></td>
+<td><p>Focus on light-weight and modular. Caffe2go for mobile deployment.</p></td>
+<td><p>Depreciated</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://deeplearning.net/software/theano/">Theano</a></p></td>
+<td><p>Montreal Institute for Learning Algorithms, University of Montreal</p></td>
+<td><p>Focus on ability to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. Last Release 2017 only just being phased out in major libraries backends.</p></td>
+<td><p>Depreciated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="compression-libraries-and-extensions">
+<h3>Compression Libraries and extensions<a class="headerlink" href="#compression-libraries-and-extensions" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Maintainer</p></th>
+<th class="head"><p>Desc</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/Xilinx/brevitas">Brevitas</a></p></td>
+<td><p>Xilinx Research</p></td>
+<td><p>Xilinx Research team Neural Network Quantization Framework from Xilinx Research FINN project originally built on theano, now being migrated to PyTorch.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis</a></p></td>
+<td><p>Xilinx</p></td>
+<td><p>Xilinx commercial software Suite with <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-ai.html">“Vitis AI”</a> Library supporting caffe and tensorflow and potentially pytorch. including AI Optimizer module for pruning, AI Quantizer for Quantizing, and AI Compiler for optimising code for DPU (Deep Learning Processing Unit) a layer on top of the bare metal FPGA.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/NervanaSystems/distiller">Intel Distiller</a></p></td>
+<td><p>Intel</p></td>
+<td><p>Compression Library ontop of PyTorch. State of the art algorithms. Includes Pruning, Quantisation, Regularization, Knowledge Distilation, Conditional Computation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/BenWhetton/keras-surgeon">Keras-Surgeon</a></p></td>
+<td><p>Ben Whetton</p></td>
+<td><p>Developed by Ben Whetton. Pruining for keras models. Last updated a year ago</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/pytorch/QNNPACK">QNNPACK</a></p></td>
+<td><p>Facebook</p></td>
+<td><p>A mobile-optimized library for low-precision high-performance neural network inference. Focus on Quantization. Intended Not for research but for high level frameworks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://cwiki.apache.org/confluence/display/MXNET/MXNet+Graph+Optimization+and+Quantization+based+on+subgraph+and+MKL-DNN">MXNet Contrib Quantization</a></p></td>
+<td><p>Apache/Community</p></td>
+<td><p>MxNet Contrib library for Quantization.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.tensorflow.org/model_optimization">tensorflow_model_optimization</a></p></td>
+<td><p>Google</p></td>
+<td><p>Includes Model optimization techniques using Quantization and Pruning APIs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/DeNA/ChainerPruner">Chainer Pruner</a></p></td>
+<td><p><a class="reference external" href="https://github.com/tkat0/">tkat0</a></p></td>
+<td><p>Channel Pruning form chainer</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.tensorflow.org/lite">Tensorflow Lite</a></p></td>
+<td><p>Google</p></td>
+<td><p>More geared towards Mobile deployment. Model Optimization through Quantization. Two in components: TF Lite interpreter and TF Lite Converter which converts tensorflow models to tflite optimized models.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/optuna/optuna">Optuna</a></p></td>
+<td><p>Optuna</p></td>
+<td><p>Automatic hyperparameter optimization software framework.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="deployment-tools">
+<h3>Deployment Tools<a class="headerlink" href="#deployment-tools" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Maintainer</p></th>
+<th class="head"><p>Desc</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://tvm.ai/">TVM Neural Network Compiler Stack</a></p></td>
+<td><p>Apache</p></td>
+<td><p><a class="reference external" href="https://docs.tvm.ai/dev/relay_intro.html">Relay</a> is a Intermediate Representation Library for building dataflow computational graphs. <a class="reference external" href="https://tvm.ai/vta">VTA</a> A programmable accelerator and an end-to-end solution that includes drivers, a JIT runtime, and an optimizing compiler stack based on TVM. Includes deployment and simulation tools for FPGAs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/pytorch/glow">Glow</a></p></td>
+<td><p>Facebook</p></td>
+<td><p>Pytorch Compiler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://software.intel.com/en-us/openvino-toolkit">OpenVino</a></p></td>
+<td><p>Intel</p></td>
+<td><p>Deployment and model optimization for FPGA</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/Xilinx/finn-hlslib">FINN-HLS</a></p></td>
+<td><p>Xilinx Research</p></td>
+<td><p>Vivaldo For FINN</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis</a></p></td>
+<td><p>Xilinx</p></td>
+<td><p>Commercial Software stack including Vivaldo for simulation and deployment</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="papers-im-reading">
+<h3>Papers Im Reading<a class="headerlink" href="#papers-im-reading" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="papers/README.md">Link</a></p>
+</div>
+<div class="section" id="papers-on-pruning">
+<h3>Papers on pruning<a class="headerlink" href="#papers-on-pruning" title="Permalink to this headline">¶</a></h3>
+<p>List of papers on pruning: <a class="reference external" href="https://github.com/he-y/Awesome-Pruning">Link</a>
+Other Collection of compression techniques <a class="reference external" href="https://github.com/cedrickchee/awesome-ml-model-compression">link</a></p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">nncompression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nncompression.html">nncompression package</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="Quickstart" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dave Turner
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
