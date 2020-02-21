@@ -1,6 +1,14 @@
 nncompression.models package
 ============================
 
+Subpackages
+-----------
+
+.. toctree::
+
+    nncompression.models.onnx
+    nncompression.models.pytorch
+
 Submodules
 ----------
 

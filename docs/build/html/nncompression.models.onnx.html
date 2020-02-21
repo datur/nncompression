@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>nncompression.compression package &#8212; nncompression 0.01 documentation</title>
+    <title>nncompression.models.onnx package &#8212; nncompression 0.01 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,8 +14,8 @@
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="nncompression.convert package" href="nncompression.convert.html" />
-    <link rel="prev" title="nncompression package" href="nncompression.html" />
+    <link rel="next" title="nncompression.models.pytorch package" href="nncompression.models.pytorch.html" />
+    <link rel="prev" title="nncompression.models package" href="nncompression.models.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,19 +32,37 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="nncompression-compression-package">
-<h1>nncompression.compression package<a class="headerlink" href="#nncompression-compression-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="nncompression-models-onnx-package">
+<h1>nncompression.models.onnx package<a class="headerlink" href="#nncompression-models-onnx-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-nncompression.compression.pruning">
-<span id="nncompression-compression-pruning-module"></span><h2>nncompression.compression.pruning module<a class="headerlink" href="#module-nncompression.compression.pruning" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-nncompression.models.onnx.utils">
+<span id="nncompression-models-onnx-utils-module"></span><h2>nncompression.models.onnx.utils module<a class="headerlink" href="#module-nncompression.models.onnx.utils" title="Permalink to this headline">¶</a></h2>
+<p>Module containing utility functions relating to onnx models</p>
+<dl class="function">
+<dt id="nncompression.models.onnx.utils.total_accuracy">
+<code class="sig-prename descclassname">nncompression.models.onnx.utils.</code><code class="sig-name descname">total_accuracy</code><span class="sig-paren">(</span><em class="sig-param">ort_session</em>, <em class="sig-param">data_loader</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nncompression/models/onnx/utils.html#total_accuracy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nncompression.models.onnx.utils.total_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for calculating the accuracy of an onnx model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ort_session</strong> (<em>onnxruntime.InferenceSession</em>) – onnxruntime session object preinitialised to the specified model</p></li>
+<li><p><strong>data_loader</strong> (<em>torch.data.DataLoader</em>) – a dataloader object for a dataset split for evaluation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The calculated accuracy of the model on the provided dataloader</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
-<div class="section" id="module-nncompression.compression.quantization">
-<span id="nncompression-compression-quantization-module"></span><h2>nncompression.compression.quantization module<a class="headerlink" href="#module-nncompression.compression.quantization" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-nncompression.compression">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-nncompression.compression" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-nncompression.models.onnx">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-nncompression.models.onnx" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -79,8 +97,10 @@
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="modules.html">nncompression</a><ul>
   <li><a href="nncompression.html">nncompression package</a><ul>
-      <li>Previous: <a href="nncompression.html" title="previous chapter">nncompression package</a></li>
-      <li>Next: <a href="nncompression.convert.html" title="next chapter">nncompression.convert package</a></li>
+  <li><a href="nncompression.models.html">nncompression.models package</a><ul>
+      <li>Previous: <a href="nncompression.models.html" title="previous chapter">nncompression.models package</a></li>
+      <li>Next: <a href="nncompression.models.pytorch.html" title="next chapter">nncompression.models.pytorch package</a></li>
+  </ul></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -116,7 +136,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/nncompression.compression.rst.txt"
+      <a href="_sources/nncompression.models.onnx.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>nncompression.models.pytorch.utils &#8212; nncompression 0.01 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for nncompression.models.pytorch.utils</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module containing utility functions for training and preparing data for pytorch</span>
+<span class="sd">network model.</span>
+
+<span class="sd">TODO:</span>
+<span class="sd">Look into setting logging levels</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span> <span class="nn">torch.utils.tensorboard</span> <span class="kn">import</span> <span class="n">SummaryWriter</span>
+
+<span class="n">CIFAR10_LABELS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;airplane&#39;</span><span class="p">,</span> <span class="s1">&#39;automobile&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;deer&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;frog&#39;</span><span class="p">,</span> <span class="s1">&#39;horse&#39;</span><span class="p">,</span> <span class="s1">&#39;ship&#39;</span><span class="p">,</span> <span class="s1">&#39;truck&#39;</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="data_loader"><a class="viewcode-back" href="../../../../nncompression.models.pytorch.html#nncompression.models.pytorch.utils.data_loader">[docs]</a><span class="k">def</span> <span class="nf">data_loader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A function that creates a dataloader for the root directory of a dataset split such as train, test, or validation.</span>
+<span class="sd">    This function also applies some transforms on the data such as normalizing the data and converting the image to a tensor.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        path {str} -- path to root folder of a subset of dataset ie. ../datasets/cifar10/train</span>
+
+<span class="sd">    Keyword Arguments:</span>
+<span class="sd">        batch_size {int} -- the size of each batch in the train loader (default: {10})</span>
+<span class="sd">        mean {tuple} -- tuple containing the mean of each colour channel in the images (default: {None})</span>
+<span class="sd">        std {tuple} -- tuple containing the standard devication of each colour channel in the dataset (default: {None})</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.utils.data.DataLoader -- an innitialised dataloader object containing len(dataset)/batch_size batches</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># `torchvision.transforms.RandomPerspective(),`torchvision.transforms.RandomResizedCrop(32), torchvision.transforms.RandomRotation(10),</span>
+    <span class="n">transforms</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()</span>
+    <span class="p">]</span>
+    <span class="k">if</span> <span class="n">mean</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">std</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">transforms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">))</span>
+
+    <span class="n">transform</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span><span class="n">transforms</span><span class="p">)</span>
+
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span>
+        <span class="n">root</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">)</span>
+
+    <span class="n">dataset_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">dataset_loader</span></div>
+
+
+<div class="viewcode-block" id="get_normalized_dataset_vals"><a class="viewcode-back" href="../../../../nncompression.models.pytorch.html#nncompression.models.pytorch.utils.get_normalized_dataset_vals">[docs]</a><span class="k">def</span> <span class="nf">get_normalized_dataset_vals</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Function for computing the mean and the std of a set of data</span>
+
+
+
+<span class="sd">        method created using this resource</span>
+<span class="sd">        https://discuss.pytorch.org/t/computing-the-mean-and-std-of-dataset/34949/2</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="n">std</span> <span class="o">=</span> <span class="mf">0.</span>
+    <span class="n">d_loader</span> <span class="o">=</span> <span class="n">data_loader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">d_loader</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        always will be data[0] as data[1] is labels</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">batch_samples</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">batch_samples</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">mean</span> <span class="o">+=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">std</span> <span class="o">+=</span> <span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">mean</span> <span class="o">/=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_loader</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="n">std</span> <span class="o">/=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_loader</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="n">tolist</span><span class="p">()),</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">std</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span></div>
+
+
+<div class="viewcode-block" id="train"><a class="viewcode-back" href="../../../../nncompression.models.pytorch.html#nncompression.models.pytorch.utils.train">[docs]</a><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">train_loader</span><span class="p">,</span> <span class="n">test_loader</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">epochs</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">run_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A function for training a provided neural network.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        net {nn.Module} -- Neural Network Model</span>
+<span class="sd">        train_loader {torch.utils.data.DataLoader} -- A dataloader object for batches in training</span>
+<span class="sd">        test_loader {torch.utils.data.DataLoader} -- A dataloader object for batches in training</span>
+<span class="sd">        criterion {torch.nn.&lt;lossfunction&gt;} -- Loss Function object to facilitate training</span>
+<span class="sd">        optimizer {torch.optim.&lt;optimizer&gt;} -- Optimizer object for model training</span>
+<span class="sd">        epochs {int} -- number of epochs in training loop</span>
+<span class="sd">        device {str} -- Specify the device the model will be trained on cpu or cuda:0</span>
+<span class="sd">        run_name {str} -- name of the run for tensorboard tracking</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting Training&#39;</span><span class="p">)</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">SummaryWriter</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s1">&#39;runs/</span><span class="si">{run_name}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">running_loss</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">running_error</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">train_loader</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+
+            <span class="n">inputs</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">data</span>
+            <span class="n">inputs</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">),</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+            <span class="n">net</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+            <span class="n">outs</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+            <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+            <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+            <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+            <span class="n">running_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+            <span class="n">running_error</span> <span class="o">+=</span> <span class="n">error_criterion</span><span class="p">(</span><span class="n">outs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">500</span> <span class="o">==</span> <span class="mi">499</span><span class="p">:</span>    <span class="c1"># print every 1000 mini-batches</span>
+                <span class="c1"># ...log the running loss</span>
+
+                <span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="s1">&#39;training loss&#39;</span><span class="p">,</span>
+                                  <span class="n">running_loss</span> <span class="o">/</span> <span class="mi">500</span><span class="p">,</span>
+                                  <span class="n">epoch</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_loader</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
+
+                <span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span>
+                    <span class="s1">&#39;training accuracy&#39;</span><span class="p">,</span> <span class="n">running_error</span><span class="o">/</span><span class="mi">500</span><span class="p">,</span> <span class="n">epoch</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_loader</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
+
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;epoch: </span><span class="si">{epoch}</span><span class="s1"> / </span><span class="si">{epochs}</span><span class="s1"> | Mini batch: {i +1} / {len(train_loader)} | training_loss: {running_loss / 500} | training_error: {running_error/500}&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">)</span>
+
+                <span class="n">running_loss</span> <span class="o">=</span> <span class="mf">0.0</span>
+                <span class="n">running_error</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="c1"># test loop</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="s1">&#39;test accuracy&#39;</span><span class="p">,</span> <span class="n">calculate_accuracy</span><span class="p">(</span>
+            <span class="n">test_loader</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">device</span><span class="p">),</span> <span class="n">epoch</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished Training&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="error_criterion"><a class="viewcode-back" href="../../../../nncompression.models.pytorch.html#nncompression.models.pytorch.utils.error_criterion">[docs]</a><span class="k">def</span> <span class="nf">error_criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;function for calculating the current accuracy on the network model</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        outputs {torch.tensor} -- a tensor containing the predicted outputs from the neural network model</span>
+<span class="sd">        labels {torch.tensor} -- a tensor containing the ground truth labels of the predicted outputs</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float -- returns the calculated training error taken away from 100 to turn it to accuracy</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">max_indices</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">train_error</span> <span class="o">=</span> <span class="p">(</span><span class="n">max_indices</span> <span class="o">!=</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">max_indices</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">train_error</span></div>
+
+
+<div class="viewcode-block" id="calculate_accuracy"><a class="viewcode-back" href="../../../../nncompression.models.pytorch.html#nncompression.models.pytorch.utils.calculate_accuracy">[docs]</a><span class="k">def</span> <span class="nf">calculate_accuracy</span><span class="p">(</span><span class="n">data_loader</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">device</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A function that calculates the accuracy of the given network model on a given testloader</span>
+
+<span class="sd">    :param data_loader: iterable collection of data separated into n number of batches</span>
+<span class="sd">    :type data_loader: torch.utils.data.DataLoader</span>
+<span class="sd">    :param net: instance of a pytorch neural netowrk class</span>
+<span class="sd">    :type net: torch.nn.Module</span>
+<span class="sd">    :param device: Variable denoting the target device for model evaluation</span>
+<span class="sd">    :type device: str</span>
+<span class="sd">    :return: Returns the calculated accuracy metric for logging</span>
+<span class="sd">    :rtype: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">net</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">data_loader</span><span class="p">):</span>
+            <span class="n">images</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">data</span>
+            <span class="n">images</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">),</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+            <span class="n">outputs</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">predicted</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">outputs</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">labels</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">correct</span> <span class="o">+=</span> <span class="p">(</span><span class="n">predicted</span> <span class="o">==</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">correct</span> <span class="o">/</span> <span class="n">total</span></div>
+
+
+<div class="viewcode-block" id="calculate_class_accuracy"><a class="viewcode-back" href="../../../../nncompression.models.pytorch.html#nncompression.models.pytorch.utils.calculate_class_accuracy">[docs]</a><span class="k">def</span> <span class="nf">calculate_class_accuracy</span><span class="p">(</span><span class="n">data_loader</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">classes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Function for calculating the accuracy for each class in the dataset</span>
+
+<span class="sd">        :param data_loader: the dataloader containing the portion of the dataset to be evaluated</span>
+<span class="sd">        :type data_loader: torch.data</span>
+<span class="sd">        :param net: the network to be evaluated</span>
+<span class="sd">        :type net: torch.nn.Module</span>
+<span class="sd">        :param device: The device for computing passes over the dataset</span>
+<span class="sd">        :type device: torch.device</span>
+<span class="sd">        :param classes: a list of the target classes for the network and dataset</span>
+<span class="sd">        :type classes: list</span>
+<span class="sd">        :return: returns a list of floats containing the accuracy of each class</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="n">net</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+    <span class="n">class_correct</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="mf">0.</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">classes</span><span class="p">)))</span>
+    <span class="n">class_total</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="mf">0.</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">classes</span><span class="p">)))</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">data_loader</span><span class="p">):</span>
+            <span class="n">images</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">data</span>
+            <span class="n">images</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">),</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+            <span class="n">outputs</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">predicted</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">predicted</span> <span class="o">==</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">classes</span><span class="p">)):</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">class_correct</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+                <span class="n">class_total</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="p">[</span><span class="mi">100</span> <span class="o">*</span> <span class="n">class_correct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">class_total</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">classes</span><span class="p">))]</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">nncompression</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modules.html">nncompression</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, David Turner.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
