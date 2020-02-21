@@ -5,32 +5,32 @@ from torch.onnx import export
 from onnx import load
 from onnx.checker import check_model
 from onnxruntime import InferenceSession
-from ..utils import to_numpy
 import numpy as np
+from ..utils import to_numpy
 
 
 def from_pytorch(model, dummy_data, file_name, device):
-    """A function to convert a pytorch model to an onnx model. 
+    """A function to convert a pytorch model to an onnx model
     Once converted perform tests to ensure model is converted correctly
 
     :param model: A pytorch neural network model
     :type model: torch.nn.Module
-    :param dummy_data: Some data that takes the shape of the neural network inputs. 
-    This doesnt have to be from training or test it can be random. ie a tensor(batch_size, input1, input2, inputn)
+    :param dummy_data: Some data that takes the shape of the neural network inputs. This doesnt have to be from training or test it can be random. ie a tensor(batch_size, input1, input2, inputn)
     :type dummy_data: tensor
     :param file_name: location for file output
     :type file_name: str
     :param device: device for pytorch compute
     :type device: torch.device
+
     """
 
     model.to(device)
 
-    x = dummy_data.to(device)
+    dummy_data = dummy_data.to(device)
 
-    out = model(x)
+    out = model(dummy_data)
 
-    export(model, x, file_name, export_params=True,
+    export(model, dummy_data, file_name, export_params=True,
            opset_version=10, do_constant_folding=True, input_names=['input'],
            output_names=['output'],
            dynamic_axes={'input': {0: 'batch_size'},

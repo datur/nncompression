@@ -1,7 +1,7 @@
 """Module containing utility functions for training and preparing data for pytorch
 network model.
 
-TODO: 
+TODO:
 Look into setting logging levels
 """
 
@@ -124,7 +124,7 @@ def train(net, train_loader, test_loader, criterion, optimizer, epochs, device, 
                 running_loss = 0.0
                 running_error = 0.0
         # test loop
-        writer.add_scalar('test accuracy', test_accuracy(
+        writer.add_scalar('test accuracy', calculate_accuracy(
             test_loader, net, device), epoch)
     print('Finished Training')
 
@@ -172,7 +172,21 @@ def calculate_accuracy(data_loader, net, device):
     return 100 * correct / total
 
 
-def calculate_class_accuracy(data_loader, net, device, classes):
+def calculate_class_accuracy(data_loader, net, device, classes) -> list:
+    """
+        Function for calculating the accuracy for each class in the dataset
+
+        :param data_loader: the dataloader containing the portion of the dataset to be evaluated
+        :type data_loader: torch.data
+        :param net: the network to be evaluated
+        :type net: torch.nn.Module
+        :param device: The device for computing passes over the dataset
+        :type device: torch.device
+        :param classes: a list of the target classes for the network and dataset
+        :type classes: list
+        :return: returns a list of floats containing the accuracy of each class
+        :rtype: list
+        """
 
     net = net.to(device)
     class_correct = list(0. for i in range(len(classes)))

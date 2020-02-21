@@ -46,6 +46,14 @@ class SimpleCNN(nn.Module):
         )
 
     def forward(self, input):
+        """
+        Defines forward pass of the network
+
+        :param input: The input for the network
+        :type input: torch.tensor
+        :return: class predictions
+        :rtype: torch.tensor
+        """
 
         out = self.layer_conv1(input)
 

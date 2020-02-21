@@ -18,9 +18,8 @@ class ResNet(nn.Module):
 
     def forward(self, x):
         """
-        [summary]
+        Defines the forward pass of the network
 
-        :param x: [description]
-        :type x: [type]
+        :param x: input
+        :type x: tensor
         """
-        pass
