@@ -1,9 +1,7 @@
 """Module containing methods to convert neural network models to onnx models.
 """
-
+import onnx
 from torch.onnx import export
-from onnx import load
-from onnx.checker import check_model
 from onnxruntime import InferenceSession
 import numpy as np
 from ..utils import to_numpy
@@ -36,8 +34,8 @@ def from_pytorch(model, dummy_data, file_name, device):
            dynamic_axes={'input': {0: 'batch_size'},
                          'output': {0: 'batch_size'}})
 
-    onnx_model = load(file_name)
-    check_model(onnx_model)
+    onnx_model = onnx.load(file_name)
+    onnx.checker.check_model(onnx_model)
 
     ort_session = InferenceSession(file_name)
 
