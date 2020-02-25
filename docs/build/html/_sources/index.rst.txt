@@ -1,14 +1,11 @@
-
-Welcome to nncompression's documentation!
-=========================================
-
-.. mdinclude:: ../README.md
-
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    modules
+.. mdinclude:: ../README.md
+
+
 
 Indices and tables
 ==================

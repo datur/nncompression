@@ -40,7 +40,7 @@ def from_pytorch(model, dummy_data, file_name, device):
     ort_session = InferenceSession(file_name)
 
     # compute ONNX Runtime output prediction
-    ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(x)}
+    ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(dummy_data)}
     ort_outs = ort_session.run(None, ort_inputs)
 
     # compare ONNX Runtime and PyTorch results

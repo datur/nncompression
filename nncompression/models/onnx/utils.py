@@ -4,10 +4,11 @@ Module containing utility functions relating to onnx models
 """
 from tqdm import tqdm
 import numpy as np
+import onnxruntime
 from ...utils import to_numpy
 
 
-def total_accuracy(ort_session, data_loader):
+def total_accuracy(onnx_model, data_loader):
     """
     Function for calculating the accuracy of an onnx model
 
@@ -18,6 +19,7 @@ def total_accuracy(ort_session, data_loader):
     :return: The calculated accuracy of the model on the provided dataloader
     :rtype: float
     """
+    ort_session = onnxruntime.InferenceSession(onnx_model)
     correct = 0
     total = 0
     for data in tqdm(data_loader):
