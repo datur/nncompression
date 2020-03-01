@@ -29,7 +29,7 @@ def from_pytorch(model, dummy_data, file_name, device):
     out = model(dummy_data)
 
     torch.onnx.export(model, dummy_data, file_name, export_params=True,
-                      opset_version=10, do_constant_folding=True, input_names=['input'],
+                      opset_version=11, do_constant_folding=True, input_names=['input'],
                       output_names=['output'],
                       dynamic_axes={'input': {0: 'batch_size'},
                                     'output': {0: 'batch_size'}})
