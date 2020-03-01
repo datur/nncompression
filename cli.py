@@ -15,10 +15,10 @@ import nncompression.models.onnx.utils as onu
 from nncompression.convert import to_onnx
 
 CIFAR_MODELS = {
-    "vgg11_bn": cifar10_models.vgg11_bn,
-    "vgg13_bn"	: cifar10_models.vgg13_bn,
-    "vgg16_bn"	: cifar10_models.vgg16_bn,
-    "vgg19_bn"	: cifar10_models.vgg19_bn,
+    # "vgg11_bn": cifar10_models.vgg11_bn,
+    # "vgg13_bn"	: cifar10_models.vgg13_bn,
+    # "vgg16_bn"	: cifar10_models.vgg16_bn,
+    # "vgg19_bn"	: cifar10_models.vgg19_bn,
     "resnet18"	: cifar10_models.resnet18,
     "resnet34": cifar10_models.resnet34,
     "resnet50": cifar10_models.resnet50,
@@ -33,7 +33,7 @@ CIFAR_MODELS = {
 BATCH_SIZE = 10
 
 
-def main(config, model):
+def main(config, model, test_accuracy):
     """
     Main method for module
 
@@ -58,17 +58,16 @@ def main(config, model):
                                            download=True, transform=transform)
     test_loader = torch.utils.data.DataLoader(testset, batch_size=BATCH_SIZE,
                                               shuffle=False, num_workers=2)
-
-    pyt_acc = ptu.calculate_accuracy(test_loader, net, device)
-
-    print(f'PyTorch model accuracy: {pyt_acc}')
+    if test_accuracy:
+        pyt_acc = ptu.calculate_accuracy(test_loader, net, device)
+        print(f'PyTorch model accuracy: {pyt_acc}')
 
     dummy_data, _ = next(iter(test_loader))
     to_onnx.from_pytorch(net, dummy_data, f'{model}.onnx', device)
 
-    onx_acc = onu.total_accuracy(f'{model}.onnx', test_loader)
-
-    print(f'onnx model accuracy {onx_acc}')
+    if test_accuracy:
+        onx_acc = onu.total_accuracy(f'{model}.onnx', test_loader)
+        print(f'onnx model accuracy {onx_acc}')
 
 
 def parse_yaml(cfg):
@@ -85,8 +84,9 @@ def parse_yaml(cfg):
 
 @click.command()
 @click.option('--model', help=f"Model choice from: {' '.join(CIFAR_MODELS.keys())}")
+@click.option('--test_accuracy', help="Whether to test the mdoels accuracy with pytorch and onnx", default=False)
 @click.argument('config', type=click.File('r'), required=True)
-def cli(model, config):
+def cli(model, test_accuracy, config):
     """
     Method that creates the cli for the module
 
@@ -96,4 +96,4 @@ def cli(model, config):
 
     config = parse_yaml(config.read())
 
-    main(config, model)
+    main(config, model, test_accuracy)
