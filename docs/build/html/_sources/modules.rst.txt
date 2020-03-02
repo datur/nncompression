@@ -2,6 +2,8 @@ nncompression
 =============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
+   cli
+   main
    nncompression
