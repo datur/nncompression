@@ -3,8 +3,11 @@
    :caption: Contents:
 
    modules
+   readme
+   usage
 
-.. mdinclude:: ../README.md
+.. include:: usage.rst
+.. include:: readme.rst
 
 
 

@@ -84,7 +84,7 @@ def parse_yaml(cfg):
 
 @click.command()
 @click.option('--model', help=f"Model choice from: {' '.join(CIFAR_MODELS.keys())}")
-@click.option('--test_accuracy', help="Whether to test the mdoels accuracy with pytorch and onnx", default=False)
+@click.option('--test_accuracy', help="Whether to test the mdoels accuracy with pytorch and onnx", is_flag=True)
 @click.argument('config', type=click.File('r'), required=True)
 def cli(model, test_accuracy, config):
     """

@@ -36,7 +36,6 @@ def from_pytorch(model, dummy_data, file_name, device):
 
     onnx_model = onnx.load(file_name)
     onnx.checker.check_model(onnx_model)
-    print(onnxruntime.get_device())
     ort_session = onnxruntime.InferenceSession(file_name)
 
     # compute ONNX Runtime output prediction

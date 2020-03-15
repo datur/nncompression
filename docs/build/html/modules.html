@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="nncompression package" href="nncompression.html" />
-    <link rel="prev" title="Masters Thesis" href="index.html" /> 
+    <link rel="next" title="cli module" href="cli.html" />
+    <link rel="prev" title="Usage" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,9 +83,13 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">nncompression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli.html">cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nncompression.html">nncompression package</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Masters Thesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
 </ul>
 
             
@@ -154,10 +158,43 @@
 <h1>nncompression<a class="headerlink" href="#nncompression" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">cli module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">main module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nncompression.html">nncompression package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nncompression.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nncompression.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nncompression.compression.html">nncompression.compression package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.compression.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.compression.html#module-nncompression.compression.pruning">nncompression.compression.pruning module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.compression.html#module-nncompression.compression.quantization">nncompression.compression.quantization module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.compression.html#module-nncompression.compression">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nncompression.convert.html">nncompression.convert package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.convert.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.convert.html#module-nncompression.convert.to_onnx">nncompression.convert.to_onnx module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.convert.html#module-nncompression.convert.to_openvino">nncompression.convert.to_openvino module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.convert.html#module-nncompression.convert">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nncompression.deploy.html">nncompression.deploy package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.deploy.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.deploy.html#module-nncompression.deploy.to_openvino">nncompression.deploy.to_openvino module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.deploy.html#module-nncompression.deploy">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nncompression.models.html">nncompression.models package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.models.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.models.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.models.html#module-nncompression.models.inception">nncompression.models.inception module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.models.html#module-nncompression.models.resnet">nncompression.models.resnet module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.models.html#module-nncompression.models.simple_cnn">nncompression.models.simple_cnn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.models.html#module-nncompression.models.utils">nncompression.models.utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nncompression.models.html#module-nncompression.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="nncompression.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nncompression.html#module-nncompression.cli">nncompression.cli module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nncompression.html#module-nncompression.utils">nncompression.utils module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nncompression.html#module-nncompression">Module contents</a></li>
 </ul>
@@ -174,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="nncompression.html" class="btn btn-neutral float-right" title="nncompression package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cli.html" class="btn btn-neutral float-right" title="cli module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="Masters Thesis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,0 +1,2215 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="806" out_port_id="806"/>
+		<IR id="144" name="806" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="820" out_port_id="820"/>
+		<IR id="170" name="820" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="786" out_port_id="786"/>
+		<IR id="109" name="Add1_16400/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="763" out_port_id="763"/>
+		<IR id="67" name="Add1_16328/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer11.conv1.weight" out_port_id="features.denseblock4.denselayer11.conv1.weight"/>
+		<IR id="712" name="Mul1_17515/Fused_Mul_2103121033_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="808" out_port_id="808"/>
+		<IR id="149" name="808" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="917" out_port_id="917"/>
+		<IR id="351" name="Add1_16844/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer1.conv1.weight" out_port_id="features.denseblock4.denselayer1.conv1.weight"/>
+		<IR id="582" name="Mul1_17275/Fused_Mul_2099120993_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1088" out_port_id="1088"/>
+		<IR id="666" name="1088" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1099" out_port_id="1099"/>
+		<IR id="687" name="1099" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1087" out_port_id="1087"/>
+		<IR id="664" name="1087" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1127" out_port_id="1127"/>
+		<IR id="739" name="1127" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1001" out_port_id="1001"/>
+		<IR id="507" name="Add1_17132/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="843" out_port_id="843"/>
+		<IR id="214" name="843" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1132" out_port_id="1132"/>
+		<IR id="749" name="Add1_17576/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="input" out_port_id="input"/>
+		<IR id="0" name="input" out_port_id="0"/>
+	</map>
+	<map>
+		<framework name="953" out_port_id="953"/>
+		<IR id="417" name="953" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="764" out_port_id="764"/>
+		<IR id="68" name="764" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer6.conv1.weight" out_port_id="features.denseblock1.denselayer6.conv1.weight"/>
+		<IR id="77" name="Mul1_16351/Fused_Mul_2084320845_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer6.conv2.weight" out_port_id="features.denseblock2.denselayer6.conv2.weight"/>
+		<IR id="168" name="onnx_initializer_node_features.denseblock2.denselayer6.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="769" out_port_id="769"/>
+		<IR id="78" name="769" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer10.conv2.weight" out_port_id="features.denseblock3.denselayer10.conv2.weight"/>
+		<IR id="384" name="onnx_initializer_node_features.denseblock3.denselayer10.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="972" out_port_id="972"/>
+		<IR id="451" name="972" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1064" out_port_id="1064"/>
+		<IR id="622" name="1064" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="747" out_port_id="747"/>
+		<IR id="37" name="747" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer11.conv2.weight" out_port_id="features.denseblock4.denselayer11.conv2.weight"/>
+		<IR id="717" name="onnx_initializer_node_features.denseblock4.denselayer11.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="921" out_port_id="921"/>
+		<IR id="357" name="921" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="789" out_port_id="789"/>
+		<IR id="114" name="Add1_16412/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer8.conv1.weight" out_port_id="features.denseblock3.denselayer8.conv1.weight"/>
+		<IR id="353" name="Mul1_16855/Fused_Mul_2092320925_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="748" out_port_id="748"/>
+		<IR id="39" name="748" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer3.conv2.weight" out_port_id="features.denseblock3.denselayer3.conv2.weight"/>
+		<IR id="293" name="onnx_initializer_node_features.denseblock3.denselayer3.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1023" out_port_id="1023"/>
+		<IR id="547" name="1023" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="920" out_port_id="920"/>
+		<IR id="356" name="Add1_16856/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="799" out_port_id="799"/>
+		<IR id="131" name="799" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1035" out_port_id="1035"/>
+		<IR id="568" name="1035" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1047" out_port_id="1047"/>
+		<IR id="589" name="1047" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1084" out_port_id="1084"/>
+		<IR id="659" name="1084" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="962" out_port_id="962"/>
+		<IR id="434" name="Add1_17000/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="780" out_port_id="780"/>
+		<IR id="97" name="780" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="891" out_port_id="891"/>
+		<IR id="302" name="891" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="856" out_port_id="856"/>
+		<IR id="239" name="Add1_16640/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer5.conv2.weight" out_port_id="features.denseblock2.denselayer5.conv2.weight"/>
+		<IR id="155" name="onnx_initializer_node_features.denseblock2.denselayer5.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer13.conv2.weight" out_port_id="features.denseblock4.denselayer13.conv2.weight"/>
+		<IR id="743" name="onnx_initializer_node_features.denseblock4.denselayer13.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1000" out_port_id="1000"/>
+		<IR id="503" name="1000" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1015" out_port_id="1015"/>
+		<IR id="533" name="Add1_17180/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="886" out_port_id="886"/>
+		<IR id="292" name="886" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer23.conv2.weight" out_port_id="features.denseblock3.denselayer23.conv2.weight"/>
+		<IR id="553" name="onnx_initializer_node_features.denseblock3.denselayer23.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="classifier.weight" out_port_id="classifier.weight"/>
+		<IR id="794" name="onnx_initializer_node_classifier.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1095" out_port_id="1095"/>
+		<IR id="679" name="1095" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="842" out_port_id="842"/>
+		<IR id="213" name="Add1_16592/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="935" out_port_id="935"/>
+		<IR id="383" name="935" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="934" out_port_id="934"/>
+		<IR id="382" name="Add1_16904/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer16.conv2.weight" out_port_id="features.denseblock3.denselayer16.conv2.weight"/>
+		<IR id="462" name="onnx_initializer_node_features.denseblock3.denselayer16.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="918" out_port_id="918"/>
+		<IR id="352" name="918" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer7.conv2.weight" out_port_id="features.denseblock4.denselayer7.conv2.weight"/>
+		<IR id="665" name="onnx_initializer_node_features.denseblock4.denselayer7.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="818" out_port_id="818"/>
+		<IR id="167" name="818" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1152" out_port_id="1152"/>
+		<IR id="784" name="1152" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="987" out_port_id="987"/>
+		<IR id="481" name="Add1_17084/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer11.conv2.weight" out_port_id="features.denseblock2.denselayer11.conv2.weight"/>
+		<IR id="233" name="onnx_initializer_node_features.denseblock2.denselayer11.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="889" out_port_id="889"/>
+		<IR id="299" name="Add1_16748/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1044" out_port_id="1044"/>
+		<IR id="585" name="Add1_17276/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="739" out_port_id="739"/>
+		<IR id="23" name="Add1_16244/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1118" out_port_id="1118"/>
+		<IR id="723" name="Add1_17528/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer9.conv1.weight" out_port_id="features.denseblock4.denselayer9.conv1.weight"/>
+		<IR id="686" name="Mul1_17467/Fused_Mul_2102321025_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1121" out_port_id="1121"/>
+		<IR id="728" name="Add1_17540/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer5.conv2.weight" out_port_id="features.denseblock4.denselayer5.conv2.weight"/>
+		<IR id="639" name="onnx_initializer_node_features.denseblock4.denselayer5.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="900" out_port_id="900"/>
+		<IR id="318" name="900" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="840" out_port_id="840"/>
+		<IR id="208" name="840" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="919" out_port_id="919"/>
+		<IR id="354" name="919" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1069" out_port_id="1069"/>
+		<IR id="632" name="Add1_17360/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="744" out_port_id="744"/>
+		<IR id="31" name="744" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer5.conv1.weight" out_port_id="features.denseblock4.denselayer5.conv1.weight"/>
+		<IR id="634" name="Mul1_17371/Fused_Mul_2100721009_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="750" out_port_id="750"/>
+		<IR id="42" name="750" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1077" out_port_id="1077"/>
+		<IR id="646" name="1077" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1058" out_port_id="1058"/>
+		<IR id="611" name="Add1_17324/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="784" out_port_id="784"/>
+		<IR id="104" name="784" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer16.conv2.weight" out_port_id="features.denseblock4.denselayer16.conv2.weight"/>
+		<IR id="782" name="onnx_initializer_node_features.denseblock4.denselayer16.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="768" out_port_id="768"/>
+		<IR id="76" name="768" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="831" out_port_id="831"/>
+		<IR id="192" name="Add1_16556/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer21.conv2.weight" out_port_id="features.denseblock3.denselayer21.conv2.weight"/>
+		<IR id="527" name="onnx_initializer_node_features.denseblock3.denselayer21.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="770" out_port_id="770"/>
+		<IR id="80" name="Add1_16352/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1061" out_port_id="1061"/>
+		<IR id="615" name="1061" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="798" out_port_id="798"/>
+		<IR id="130" name="798" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1138" out_port_id="1138"/>
+		<IR id="758" name="1138" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1046" out_port_id="1046"/>
+		<IR id="588" name="1046" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="948" out_port_id="948"/>
+		<IR id="408" name="Add1_16952/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="807" out_port_id="807"/>
+		<IR id="148" name="Add1_16472/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1151" out_port_id="1151"/>
+		<IR id="783" name="1151" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer2.conv2.weight" out_port_id="features.denseblock2.denselayer2.conv2.weight"/>
+		<IR id="116" name="onnx_initializer_node_features.denseblock2.denselayer2.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="791" out_port_id="791"/>
+		<IR id="117" name="791" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1079" out_port_id="1079"/>
+		<IR id="650" name="Add1_17396/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1101" out_port_id="1101"/>
+		<IR id="690" name="1101" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="862" out_port_id="862"/>
+		<IR id="248" name="862" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer3.conv1.weight" out_port_id="features.denseblock2.denselayer3.conv1.weight"/>
+		<IR id="124" name="Mul1_16435/Fused_Mul_2085520857_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="932" out_port_id="932"/>
+		<IR id="378" name="932" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="817" out_port_id="817"/>
+		<IR id="166" name="Add1_16508/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer5.conv1.weight" out_port_id="features.denseblock2.denselayer5.conv1.weight"/>
+		<IR id="150" name="Mul1_16483/Fused_Mul_2086320865_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="982" out_port_id="982"/>
+		<IR id="471" name="982" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer24.conv2.weight" out_port_id="features.denseblock3.denselayer24.conv2.weight"/>
+		<IR id="566" name="onnx_initializer_node_features.denseblock3.denselayer24.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1153" out_port_id="1153"/>
+		<IR id="788" name="Add1_17648/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1111" out_port_id="1111"/>
+		<IR id="710" name="Add1_17504/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="794" out_port_id="794"/>
+		<IR id="123" name="794" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer7.conv1.weight" out_port_id="features.denseblock3.denselayer7.conv1.weight"/>
+		<IR id="340" name="Mul1_16831/Fused_Mul_2091920921_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer1.conv1.weight" out_port_id="features.denseblock3.denselayer1.conv1.weight"/>
+		<IR id="262" name="Mul1_16687/Fused_Mul_2089520897_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="977" out_port_id="977"/>
+		<IR id="461" name="977" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer12.conv2.weight" out_port_id="features.denseblock3.denselayer12.conv2.weight"/>
+		<IR id="410" name="onnx_initializer_node_features.denseblock3.denselayer12.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer15.conv1.weight" out_port_id="features.denseblock3.denselayer15.conv1.weight"/>
+		<IR id="444" name="Mul1_17023/Fused_Mul_2095120953_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="766" out_port_id="766"/>
+		<IR id="71" name="766" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1154" out_port_id="1154"/>
+		<IR id="789" name="1154" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1059" out_port_id="1059"/>
+		<IR id="612" name="1059" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1024" out_port_id="1024"/>
+		<IR id="549" name="1024" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer22.conv2.weight" out_port_id="features.denseblock3.denselayer22.conv2.weight"/>
+		<IR id="540" name="onnx_initializer_node_features.denseblock3.denselayer22.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="877" out_port_id="877"/>
+		<IR id="276" name="877" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="884" out_port_id="884"/>
+		<IR id="289" name="884" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="855" out_port_id="855"/>
+		<IR id="235" name="855" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="761" out_port_id="761"/>
+		<IR id="63" name="761" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="936" out_port_id="936"/>
+		<IR id="385" name="936" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1155" out_port_id="1155"/>
+		<IR id="791" name="1155/reduce" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="741" out_port_id="741"/>
+		<IR id="26" name="741" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="753" out_port_id="753"/>
+		<IR id="49" name="Add1_16292/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="907" out_port_id="907"/>
+		<IR id="331" name="907" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1117" out_port_id="1117"/>
+		<IR id="719" name="1117" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="870" out_port_id="870"/>
+		<IR id="263" name="870" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="964" out_port_id="964"/>
+		<IR id="437" name="964" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="849" out_port_id="849"/>
+		<IR id="226" name="Add1_16616/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="980" out_port_id="980"/>
+		<IR id="468" name="Add1_17060/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer9.conv2.weight" out_port_id="features.denseblock3.denselayer9.conv2.weight"/>
+		<IR id="371" name="onnx_initializer_node_features.denseblock3.denselayer9.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="940" out_port_id="940"/>
+		<IR id="393" name="940" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1133" out_port_id="1133"/>
+		<IR id="750" name="1133" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="867" out_port_id="867"/>
+		<IR id="256" name="867" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer15.conv1.weight" out_port_id="features.denseblock4.denselayer15.conv1.weight"/>
+		<IR id="764" name="Mul1_17611/Fused_Mul_2104721049_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="885" out_port_id="885"/>
+		<IR id="291" name="Add1_16736/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1071" out_port_id="1071"/>
+		<IR id="635" name="1071" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer9.conv2.weight" out_port_id="features.denseblock2.denselayer9.conv2.weight"/>
+		<IR id="207" name="onnx_initializer_node_features.denseblock2.denselayer9.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer23.conv1.weight" out_port_id="features.denseblock3.denselayer23.conv1.weight"/>
+		<IR id="548" name="Mul1_17215/Fused_Mul_2098320985_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1076" out_port_id="1076"/>
+		<IR id="645" name="Add1_17384/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1140" out_port_id="1140"/>
+		<IR id="763" name="1140" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="760" out_port_id="760"/>
+		<IR id="62" name="Add1_16316/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="874" out_port_id="874"/>
+		<IR id="269" name="874" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="869" out_port_id="869"/>
+		<IR id="261" name="869" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="785" out_port_id="785"/>
+		<IR id="105" name="785" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1098" out_port_id="1098"/>
+		<IR id="685" name="1098" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1053" out_port_id="1053"/>
+		<IR id="601" name="1053" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="734" out_port_id="734"/>
+		<IR id="13" name="734" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1148" out_port_id="1148"/>
+		<IR id="778" name="1148" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer4.conv1.weight" out_port_id="features.denseblock2.denselayer4.conv1.weight"/>
+		<IR id="137" name="Mul1_16459/Fused_Mul_2085920861_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.conv0.weight" out_port_id="features.conv0.weight"/>
+		<IR id="1" name="Mul1_/Fused_Mul_2081920821_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1126" out_port_id="1126"/>
+		<IR id="737" name="1126" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer13.conv1.weight" out_port_id="features.denseblock3.denselayer13.conv1.weight"/>
+		<IR id="418" name="Mul1_16975/Fused_Mul_2094320945_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="923" out_port_id="923"/>
+		<IR id="360" name="923" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer9.conv1.weight" out_port_id="features.denseblock3.denselayer9.conv1.weight"/>
+		<IR id="366" name="Mul1_16879/Fused_Mul_2092720929_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer22.conv1.weight" out_port_id="features.denseblock3.denselayer22.conv1.weight"/>
+		<IR id="535" name="Mul1_17191/Fused_Mul_2097920981_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="893" out_port_id="893"/>
+		<IR id="305" name="893" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1033" out_port_id="1033"/>
+		<IR id="565" name="1033" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer18.conv1.weight" out_port_id="features.denseblock3.denselayer18.conv1.weight"/>
+		<IR id="483" name="Mul1_17095/Fused_Mul_2096320965_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer16.conv1.weight" out_port_id="features.denseblock4.denselayer16.conv1.weight"/>
+		<IR id="777" name="Mul1_17635/Fused_Mul_2105121053_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1107" out_port_id="1107"/>
+		<IR id="702" name="Add1_17492/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer1.conv1.weight" out_port_id="features.denseblock2.denselayer1.conv1.weight"/>
+		<IR id="98" name="Mul1_16387/Fused_Mul_2084720849_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="956" out_port_id="956"/>
+		<IR id="422" name="956" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer4.conv2.weight" out_port_id="features.denseblock3.denselayer4.conv2.weight"/>
+		<IR id="306" name="onnx_initializer_node_features.denseblock3.denselayer4.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer12.conv1.weight" out_port_id="features.denseblock2.denselayer12.conv1.weight"/>
+		<IR id="241" name="Mul1_16651/Fused_Mul_2089120893_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1025" out_port_id="1025"/>
+		<IR id="551" name="Add1_17216/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="838" out_port_id="838"/>
+		<IR id="205" name="Add1_16580/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1092" out_port_id="1092"/>
+		<IR id="674" name="1092" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer6.conv2.weight" out_port_id="features.denseblock3.denselayer6.conv2.weight"/>
+		<IR id="332" name="onnx_initializer_node_features.denseblock3.denselayer6.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="994" out_port_id="994"/>
+		<IR id="494" name="Add1_17108/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer2.conv2.weight" out_port_id="features.denseblock4.denselayer2.conv2.weight"/>
+		<IR id="600" name="onnx_initializer_node_features.denseblock4.denselayer2.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="995" out_port_id="995"/>
+		<IR id="495" name="995" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="916" out_port_id="916"/>
+		<IR id="347" name="916" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="873" out_port_id="873"/>
+		<IR id="268" name="873" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1052" out_port_id="1052"/>
+		<IR id="599" name="1052" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer3.conv1.weight" out_port_id="features.denseblock1.denselayer3.conv1.weight"/>
+		<IR id="38" name="Mul1_16279/Fused_Mul_2083120833_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1072" out_port_id="1072"/>
+		<IR id="637" name="Add1_17372/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1102" out_port_id="1102"/>
+		<IR id="692" name="1102" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="809" out_port_id="809"/>
+		<IR id="151" name="809" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="996" out_port_id="996"/>
+		<IR id="497" name="996" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1090" out_port_id="1090"/>
+		<IR id="671" name="Add1_17432/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1134" out_port_id="1134"/>
+		<IR id="752" name="1134" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1144" out_port_id="1144"/>
+		<IR id="770" name="1144" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1074" out_port_id="1074"/>
+		<IR id="640" name="1074" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer7.conv1.weight" out_port_id="features.denseblock2.denselayer7.conv1.weight"/>
+		<IR id="176" name="Mul1_16531/Fused_Mul_2087120873_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="787" out_port_id="787"/>
+		<IR id="110" name="787" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1043" out_port_id="1043"/>
+		<IR id="583" name="1043" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1163" out_port_id="1163"/>
+		<IR id="793" name="1163" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer7.conv2.weight" out_port_id="features.denseblock3.denselayer7.conv2.weight"/>
+		<IR id="345" name="onnx_initializer_node_features.denseblock3.denselayer7.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer20.conv1.weight" out_port_id="features.denseblock3.denselayer20.conv1.weight"/>
+		<IR id="509" name="Mul1_17143/Fused_Mul_2097120973_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1122" out_port_id="1122"/>
+		<IR id="729" name="1122" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer12.conv2.weight" out_port_id="features.denseblock2.denselayer12.conv2.weight"/>
+		<IR id="246" name="onnx_initializer_node_features.denseblock2.denselayer12.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer4.conv1.weight" out_port_id="features.denseblock3.denselayer4.conv1.weight"/>
+		<IR id="301" name="Mul1_16759/Fused_Mul_2090720909_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="837" out_port_id="837"/>
+		<IR id="203" name="837" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="983" out_port_id="983"/>
+		<IR id="473" name="Add1_17072/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1141" out_port_id="1141"/>
+		<IR id="765" name="1141" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1011" out_port_id="1011"/>
+		<IR id="525" name="Add1_17168/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1081" out_port_id="1081"/>
+		<IR id="653" name="1081" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer4.conv1.weight" out_port_id="features.denseblock1.denselayer4.conv1.weight"/>
+		<IR id="51" name="Mul1_16303/Fused_Mul_2083520837_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="756" out_port_id="756"/>
+		<IR id="54" name="Add1_16304/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer20.conv2.weight" out_port_id="features.denseblock3.denselayer20.conv2.weight"/>
+		<IR id="514" name="onnx_initializer_node_features.denseblock3.denselayer20.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="857" out_port_id="857"/>
+		<IR id="240" name="857" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer2.conv1.weight" out_port_id="features.denseblock3.denselayer2.conv1.weight"/>
+		<IR id="275" name="Mul1_16711/Fused_Mul_2089920901_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1116" out_port_id="1116"/>
+		<IR id="718" name="1116" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1018" out_port_id="1018"/>
+		<IR id="538" name="Add1_17192/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="859" out_port_id="859"/>
+		<IR id="244" name="Add1_16652/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="812" out_port_id="812"/>
+		<IR id="156" name="812" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="997" out_port_id="997"/>
+		<IR id="499" name="Add1_17120/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer13.conv2.weight" out_port_id="features.denseblock3.denselayer13.conv2.weight"/>
+		<IR id="423" name="onnx_initializer_node_features.denseblock3.denselayer13.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="890" out_port_id="890"/>
+		<IR id="300" name="890" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer9.conv1.weight" out_port_id="features.denseblock2.denselayer9.conv1.weight"/>
+		<IR id="202" name="Mul1_16579/Fused_Mul_2087920881_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1146" out_port_id="1146"/>
+		<IR id="775" name="Add1_17624/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="883" out_port_id="883"/>
+		<IR id="287" name="883" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1042" out_port_id="1042"/>
+		<IR id="581" name="1042" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="802" out_port_id="802"/>
+		<IR id="138" name="802" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1086" out_port_id="1086"/>
+		<IR id="663" name="Add1_17420/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1149" out_port_id="1149"/>
+		<IR id="780" name="Add1_17636/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="745" out_port_id="745"/>
+		<IR id="32" name="745" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer2.conv2.weight" out_port_id="features.denseblock3.denselayer2.conv2.weight"/>
+		<IR id="280" name="onnx_initializer_node_features.denseblock3.denselayer2.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="752" out_port_id="752"/>
+		<IR id="45" name="752" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer5.conv1.weight" out_port_id="features.denseblock3.denselayer5.conv1.weight"/>
+		<IR id="314" name="Mul1_16783/Fused_Mul_2091120913_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1083" out_port_id="1083"/>
+		<IR id="658" name="Add1_17408/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer10.conv2.weight" out_port_id="features.denseblock4.denselayer10.conv2.weight"/>
+		<IR id="704" name="onnx_initializer_node_features.denseblock4.denselayer10.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="967" out_port_id="967"/>
+		<IR id="443" name="967" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="938" out_port_id="938"/>
+		<IR id="390" name="Add1_16916/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer8.conv2.weight" out_port_id="features.denseblock4.denselayer8.conv2.weight"/>
+		<IR id="678" name="onnx_initializer_node_features.denseblock4.denselayer8.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="985" out_port_id="985"/>
+		<IR id="476" name="985" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer10.conv1.weight" out_port_id="features.denseblock2.denselayer10.conv1.weight"/>
+		<IR id="215" name="Mul1_16603/Fused_Mul_2088320885_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer1.conv2.weight" out_port_id="features.denseblock1.denselayer1.conv2.weight"/>
+		<IR id="17" name="onnx_initializer_node_features.denseblock1.denselayer1.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer7.conv1.weight" out_port_id="features.denseblock4.denselayer7.conv1.weight"/>
+		<IR id="660" name="Mul1_17419/Fused_Mul_2101521017_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="991" out_port_id="991"/>
+		<IR id="487" name="991" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1143" out_port_id="1143"/>
+		<IR id="768" name="1143" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer19.conv2.weight" out_port_id="features.denseblock3.denselayer19.conv2.weight"/>
+		<IR id="501" name="onnx_initializer_node_features.denseblock3.denselayer19.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="output" out_port_id="0"/>
+		<IR id="797" name="output" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer6.conv2.weight" out_port_id="features.denseblock4.denselayer6.conv2.weight"/>
+		<IR id="652" name="onnx_initializer_node_features.denseblock4.denselayer6.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="743" out_port_id="743"/>
+		<IR id="29" name="743" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="735" out_port_id="735"/>
+		<IR id="15" name="Add1_16232/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer8.conv1.weight" out_port_id="features.denseblock2.denselayer8.conv1.weight"/>
+		<IR id="189" name="Mul1_16555/Fused_Mul_2087520877_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="926" out_port_id="926"/>
+		<IR id="367" name="926" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer12.conv1.weight" out_port_id="features.denseblock3.denselayer12.conv1.weight"/>
+		<IR id="405" name="Mul1_16951/Fused_Mul_2093920941_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="737" out_port_id="737"/>
+		<IR id="18" name="737" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer11.conv1.weight" out_port_id="features.denseblock3.denselayer11.conv1.weight"/>
+		<IR id="392" name="Mul1_16927/Fused_Mul_2093520937_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1097" out_port_id="1097"/>
+		<IR id="684" name="Add1_17456/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1012" out_port_id="1012"/>
+		<IR id="526" name="1012" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="829" out_port_id="829"/>
+		<IR id="188" name="829" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="951" out_port_id="951"/>
+		<IR id="412" name="951" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1060" out_port_id="1060"/>
+		<IR id="614" name="1060" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1139" out_port_id="1139"/>
+		<IR id="762" name="Add1_17600/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="981" out_port_id="981"/>
+		<IR id="469" name="981" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="788" out_port_id="788"/>
+		<IR id="112" name="788" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="826" out_port_id="826"/>
+		<IR id="182" name="826" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1085" out_port_id="1085"/>
+		<IR id="661" name="1085" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1005" out_port_id="1005"/>
+		<IR id="513" name="1005" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1109" out_port_id="1109"/>
+		<IR id="705" name="1109" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="892" out_port_id="892"/>
+		<IR id="304" name="Add1_16760/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer4.conv2.weight" out_port_id="features.denseblock2.denselayer4.conv2.weight"/>
+		<IR id="142" name="onnx_initializer_node_features.denseblock2.denselayer4.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1103" out_port_id="1103"/>
+		<IR id="693" name="1103" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="958" out_port_id="958"/>
+		<IR id="425" name="958" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer8.conv2.weight" out_port_id="features.denseblock3.denselayer8.conv2.weight"/>
+		<IR id="358" name="onnx_initializer_node_features.denseblock3.denselayer8.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="979" out_port_id="979"/>
+		<IR id="464" name="979" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="872" out_port_id="872"/>
+		<IR id="266" name="872" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="942" out_port_id="942"/>
+		<IR id="396" name="942" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer2.conv1.weight" out_port_id="features.denseblock2.denselayer2.conv1.weight"/>
+		<IR id="111" name="Mul1_16411/Fused_Mul_2085120853_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.transition2.conv.weight" out_port_id="features.transition2.conv.weight"/>
+		<IR id="254" name="onnx_initializer_node_features.transition2.conv.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="929" out_port_id="929"/>
+		<IR id="372" name="929" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1115" out_port_id="1115"/>
+		<IR id="716" name="1115" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1066" out_port_id="1066"/>
+		<IR id="625" name="1066" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="801" out_port_id="801"/>
+		<IR id="136" name="801" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="835" out_port_id="835"/>
+		<IR id="200" name="Add1_16568/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="957" out_port_id="957"/>
+		<IR id="424" name="957" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1034" out_port_id="1034"/>
+		<IR id="567" name="1034" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer6.conv1.weight" out_port_id="features.denseblock3.denselayer6.conv1.weight"/>
+		<IR id="327" name="Mul1_16807/Fused_Mul_2091520917_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1130" out_port_id="1130"/>
+		<IR id="744" name="1130" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="927" out_port_id="927"/>
+		<IR id="369" name="Add1_16880/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="733" out_port_id="733"/>
+		<IR id="11" name="733" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1028" out_port_id="1028"/>
+		<IR id="555" name="1028" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer3.conv1.weight" out_port_id="features.denseblock4.denselayer3.conv1.weight"/>
+		<IR id="608" name="Mul1_17323/Fused_Mul_2099921001_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="866" out_port_id="866"/>
+		<IR id="255" name="865" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="865" out_port_id="865"/>
+		<IR id="255" name="865" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="875" out_port_id="875"/>
+		<IR id="273" name="Add1_16700/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1150" out_port_id="1150"/>
+		<IR id="781" name="1150" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="732" out_port_id="732"/>
+		<IR id="10" name="Add1_16220/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1123" out_port_id="1123"/>
+		<IR id="731" name="1123" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1016" out_port_id="1016"/>
+		<IR id="534" name="1016" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="887" out_port_id="887"/>
+		<IR id="294" name="887" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1124" out_port_id="1124"/>
+		<IR id="732" name="1124" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="844" out_port_id="844"/>
+		<IR id="216" name="844" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="986" out_port_id="986"/>
+		<IR id="477" name="986" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="832" out_port_id="832"/>
+		<IR id="193" name="832" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="880" out_port_id="880"/>
+		<IR id="281" name="880" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="830" out_port_id="830"/>
+		<IR id="190" name="830" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="943" out_port_id="943"/>
+		<IR id="398" name="943" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1045" out_port_id="1045"/>
+		<IR id="586" name="1045" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1106" out_port_id="1106"/>
+		<IR id="700" name="1106" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="914" out_port_id="914"/>
+		<IR id="344" name="914" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="728" out_port_id="728"/>
+		<IR id="2" name="728" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="930" out_port_id="930"/>
+		<IR id="373" name="930" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1055" out_port_id="1055"/>
+		<IR id="606" name="Add1_17312/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1022" out_port_id="1022"/>
+		<IR id="546" name="Add1_17204/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer3.conv2.weight" out_port_id="features.denseblock4.denselayer3.conv2.weight"/>
+		<IR id="613" name="onnx_initializer_node_features.denseblock4.denselayer3.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1063" out_port_id="1063"/>
+		<IR id="620" name="1063" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1145" out_port_id="1145"/>
+		<IR id="771" name="1145" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="868" out_port_id="868"/>
+		<IR id="260" name="Add1_16676/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="757" out_port_id="757"/>
+		<IR id="55" name="757" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer3.conv2.weight" out_port_id="features.denseblock1.denselayer3.conv2.weight"/>
+		<IR id="43" name="onnx_initializer_node_features.denseblock1.denselayer3.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="847" out_port_id="847"/>
+		<IR id="221" name="847" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1013" out_port_id="1013"/>
+		<IR id="528" name="1013" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer7.conv2.weight" out_port_id="features.denseblock2.denselayer7.conv2.weight"/>
+		<IR id="181" name="onnx_initializer_node_features.denseblock2.denselayer7.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="975" out_port_id="975"/>
+		<IR id="458" name="975" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1135" out_port_id="1135"/>
+		<IR id="754" name="Add1_17588/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1002" out_port_id="1002"/>
+		<IR id="508" name="1002" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="800" out_port_id="800"/>
+		<IR id="135" name="Add1_16448/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="816" out_port_id="816"/>
+		<IR id="164" name="816" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer1.conv2.weight" out_port_id="features.denseblock2.denselayer1.conv2.weight"/>
+		<IR id="103" name="onnx_initializer_node_features.denseblock2.denselayer1.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="848" out_port_id="848"/>
+		<IR id="222" name="848" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="876" out_port_id="876"/>
+		<IR id="274" name="876" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="909" out_port_id="909"/>
+		<IR id="334" name="909" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1065" out_port_id="1065"/>
+		<IR id="624" name="Add1_17348/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="797" out_port_id="797"/>
+		<IR id="128" name="797" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="762" out_port_id="762"/>
+		<IR id="65" name="762" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="959" out_port_id="959"/>
+		<IR id="429" name="Add1_16988/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="773" out_port_id="773"/>
+		<IR id="84" name="773" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer5.conv2.weight" out_port_id="features.denseblock1.denselayer5.conv2.weight"/>
+		<IR id="69" name="onnx_initializer_node_features.denseblock1.denselayer5.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1100" out_port_id="1100"/>
+		<IR id="689" name="Add1_17468/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="897" out_port_id="897"/>
+		<IR id="313" name="897" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="796" out_port_id="796"/>
+		<IR id="127" name="Add1_16436/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer18.conv2.weight" out_port_id="features.denseblock3.denselayer18.conv2.weight"/>
+		<IR id="488" name="onnx_initializer_node_features.denseblock3.denselayer18.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="819" out_port_id="819"/>
+		<IR id="169" name="819" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1104" out_port_id="1104"/>
+		<IR id="697" name="Add1_17480/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="736" out_port_id="736"/>
+		<IR id="16" name="736" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1147" out_port_id="1147"/>
+		<IR id="776" name="1147" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer6.conv1.weight" out_port_id="features.denseblock4.denselayer6.conv1.weight"/>
+		<IR id="647" name="Mul1_17395/Fused_Mul_2101121013_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1082" out_port_id="1082"/>
+		<IR id="654" name="1082" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="852" out_port_id="852"/>
+		<IR id="231" name="Add1_16628/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="828" out_port_id="828"/>
+		<IR id="187" name="Add1_16544/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1050" out_port_id="1050"/>
+		<IR id="596" name="1050" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="906" out_port_id="906"/>
+		<IR id="330" name="Add1_16808/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1031" out_port_id="1031"/>
+		<IR id="562" name="1031" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="823" out_port_id="823"/>
+		<IR id="177" name="823" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer10.conv1.weight" out_port_id="features.denseblock3.denselayer10.conv1.weight"/>
+		<IR id="379" name="Mul1_16903/Fused_Mul_2093120933_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer2.conv1.weight" out_port_id="features.denseblock4.denselayer2.conv1.weight"/>
+		<IR id="595" name="Mul1_17299/Fused_Mul_2099520997_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="878" out_port_id="878"/>
+		<IR id="278" name="Add1_16712/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1073" out_port_id="1073"/>
+		<IR id="638" name="1073" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1014" out_port_id="1014"/>
+		<IR id="529" name="1014" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1125" out_port_id="1125"/>
+		<IR id="736" name="Add1_17552/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer10.conv2.weight" out_port_id="features.denseblock2.denselayer10.conv2.weight"/>
+		<IR id="220" name="onnx_initializer_node_features.denseblock2.denselayer10.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="954" out_port_id="954"/>
+		<IR id="419" name="954" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1019" out_port_id="1019"/>
+		<IR id="539" name="1019" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="898" out_port_id="898"/>
+		<IR id="315" name="898" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1078" out_port_id="1078"/>
+		<IR id="648" name="1078" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer13.conv1.weight" out_port_id="features.denseblock4.denselayer13.conv1.weight"/>
+		<IR id="738" name="Mul1_17563/Fused_Mul_2103921041_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="924" out_port_id="924"/>
+		<IR id="364" name="Add1_16868/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1129" out_port_id="1129"/>
+		<IR id="742" name="1129" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="746" out_port_id="746"/>
+		<IR id="36" name="Add1_16268/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1094" out_port_id="1094"/>
+		<IR id="677" name="1094" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="755" out_port_id="755"/>
+		<IR id="52" name="755" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="933" out_port_id="933"/>
+		<IR id="380" name="933" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="965" out_port_id="965"/>
+		<IR id="438" name="965" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="952" out_port_id="952"/>
+		<IR id="416" name="Add1_16964/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1080" out_port_id="1080"/>
+		<IR id="651" name="1080" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1162" out_port_id="1162"/>
+		<IR id="792" name="1163/Cast_131802_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="853" out_port_id="853"/>
+		<IR id="232" name="853" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1110" out_port_id="1110"/>
+		<IR id="706" name="1110" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1136" out_port_id="1136"/>
+		<IR id="755" name="1136" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="751" out_port_id="751"/>
+		<IR id="44" name="751" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="738" out_port_id="738"/>
+		<IR id="19" name="738" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="795" out_port_id="795"/>
+		<IR id="125" name="795" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer6.conv1.weight" out_port_id="features.denseblock2.denselayer6.conv1.weight"/>
+		<IR id="163" name="Mul1_16507/Fused_Mul_2086720869_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="978" out_port_id="978"/>
+		<IR id="463" name="978" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="984" out_port_id="984"/>
+		<IR id="474" name="984" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="903" out_port_id="903"/>
+		<IR id="325" name="Add1_16796/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="813" out_port_id="813"/>
+		<IR id="157" name="813" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="758" out_port_id="758"/>
+		<IR id="57" name="758" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="928" out_port_id="928"/>
+		<IR id="370" name="928" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="771" out_port_id="771"/>
+		<IR id="81" name="771" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1048" out_port_id="1048"/>
+		<IR id="593" name="Add1_17288/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1010" out_port_id="1010"/>
+		<IR id="523" name="1010" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="863" out_port_id="863"/>
+		<IR id="252" name="Add1_16664/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="841" out_port_id="841"/>
+		<IR id="209" name="841" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="894" out_port_id="894"/>
+		<IR id="307" name="894" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="993" out_port_id="993"/>
+		<IR id="490" name="993" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="947" out_port_id="947"/>
+		<IR id="406" name="947" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1027" out_port_id="1027"/>
+		<IR id="554" name="1027" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="845" out_port_id="845"/>
+		<IR id="218" name="Add1_16604/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer8.conv2.weight" out_port_id="features.denseblock2.denselayer8.conv2.weight"/>
+		<IR id="194" name="onnx_initializer_node_features.denseblock2.denselayer8.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="804" out_port_id="804"/>
+		<IR id="141" name="804" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer3.conv1.weight" out_port_id="features.denseblock3.denselayer3.conv1.weight"/>
+		<IR id="288" name="Mul1_16735/Fused_Mul_2090320905_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1020" out_port_id="1020"/>
+		<IR id="541" name="1020" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1089" out_port_id="1089"/>
+		<IR id="667" name="1089" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.transition3.conv.weight" out_port_id="features.transition3.conv.weight"/>
+		<IR id="574" name="onnx_initializer_node_features.transition3.conv.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="946" out_port_id="946"/>
+		<IR id="404" name="946" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="908" out_port_id="908"/>
+		<IR id="333" name="908" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer2.conv2.weight" out_port_id="features.denseblock1.denselayer2.conv2.weight"/>
+		<IR id="30" name="onnx_initializer_node_features.denseblock1.denselayer2.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="765" out_port_id="765"/>
+		<IR id="70" name="765" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer1.conv2.weight" out_port_id="features.denseblock3.denselayer1.conv2.weight"/>
+		<IR id="267" name="onnx_initializer_node_features.denseblock3.denselayer1.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="999" out_port_id="999"/>
+		<IR id="502" name="999" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="973" out_port_id="973"/>
+		<IR id="455" name="Add1_17036/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="742" out_port_id="742"/>
+		<IR id="28" name="Add1_16256/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1017" out_port_id="1017"/>
+		<IR id="536" name="1017" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="961" out_port_id="961"/>
+		<IR id="432" name="961" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1056" out_port_id="1056"/>
+		<IR id="607" name="1056" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="759" out_port_id="759"/>
+		<IR id="58" name="759" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="871" out_port_id="871"/>
+		<IR id="265" name="Add1_16688/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="881" out_port_id="881"/>
+		<IR id="282" name="881" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1026" out_port_id="1026"/>
+		<IR id="552" name="1026" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer8.conv1.weight" out_port_id="features.denseblock4.denselayer8.conv1.weight"/>
+		<IR id="673" name="Mul1_17443/Fused_Mul_2101921021_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="896" out_port_id="896"/>
+		<IR id="312" name="Add1_16772/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="805" out_port_id="805"/>
+		<IR id="143" name="805" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="955" out_port_id="955"/>
+		<IR id="421" name="Add1_16976/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="992" out_port_id="992"/>
+		<IR id="489" name="992" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1032" out_port_id="1032"/>
+		<IR id="564" name="Add1_17240/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="777" out_port_id="777"/>
+		<IR id="91" name="776" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="776" out_port_id="776"/>
+		<IR id="91" name="776" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer2.conv1.weight" out_port_id="features.denseblock1.denselayer2.conv1.weight"/>
+		<IR id="25" name="Mul1_16255/Fused_Mul_2082720829_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1041" out_port_id="1041"/>
+		<IR id="580" name="Add1_17264/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="976" out_port_id="976"/>
+		<IR id="460" name="Add1_17048/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="792" out_port_id="792"/>
+		<IR id="118" name="792" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="790" out_port_id="790"/>
+		<IR id="115" name="790" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="810" out_port_id="810"/>
+		<IR id="153" name="Add1_16484/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1137" out_port_id="1137"/>
+		<IR id="757" name="1137" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer4.conv2.weight" out_port_id="features.denseblock1.denselayer4.conv2.weight"/>
+		<IR id="56" name="onnx_initializer_node_features.denseblock1.denselayer4.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1096" out_port_id="1096"/>
+		<IR id="680" name="1096" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer14.conv1.weight" out_port_id="features.denseblock4.denselayer14.conv1.weight"/>
+		<IR id="751" name="Mul1_17587/Fused_Mul_2104321045_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="945" out_port_id="945"/>
+		<IR id="403" name="Add1_16940/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="989" out_port_id="989"/>
+		<IR id="484" name="989" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer14.conv2.weight" out_port_id="features.denseblock3.denselayer14.conv2.weight"/>
+		<IR id="436" name="onnx_initializer_node_features.denseblock3.denselayer14.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1040" out_port_id="1040"/>
+		<IR id="576" name="1040" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1036" out_port_id="1036"/>
+		<IR id="572" name="Add1_17252/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1021" out_port_id="1021"/>
+		<IR id="542" name="1021" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer1.conv2.weight" out_port_id="features.denseblock4.denselayer1.conv2.weight"/>
+		<IR id="587" name="onnx_initializer_node_features.denseblock4.denselayer1.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="836" out_port_id="836"/>
+		<IR id="201" name="836" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1068" out_port_id="1068"/>
+		<IR id="628" name="1068" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1062" out_port_id="1062"/>
+		<IR id="619" name="Add1_17336/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.transition1.conv.weight" out_port_id="features.transition1.conv.weight"/>
+		<IR id="90" name="onnx_initializer_node_features.transition1.conv.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="749" out_port_id="749"/>
+		<IR id="41" name="Add1_16280/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="740" out_port_id="740"/>
+		<IR id="24" name="740" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="998" out_port_id="998"/>
+		<IR id="500" name="998" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="861" out_port_id="861"/>
+		<IR id="247" name="861" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="941" out_port_id="941"/>
+		<IR id="395" name="Add1_16928/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="779" out_port_id="779"/>
+		<IR id="96" name="Add1_16376/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer17.conv1.weight" out_port_id="features.denseblock3.denselayer17.conv1.weight"/>
+		<IR id="470" name="Mul1_17071/Fused_Mul_2095920961_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1030" out_port_id="1030"/>
+		<IR id="560" name="1030" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1007" out_port_id="1007"/>
+		<IR id="516" name="1007" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="937" out_port_id="937"/>
+		<IR id="386" name="937" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1114" out_port_id="1114"/>
+		<IR id="715" name="Add1_17516/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="974" out_port_id="974"/>
+		<IR id="456" name="974" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1128" out_port_id="1128"/>
+		<IR id="741" name="Add1_17564/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="922" out_port_id="922"/>
+		<IR id="359" name="922" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="963" out_port_id="963"/>
+		<IR id="435" name="963" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="775" out_port_id="775"/>
+		<IR id="89" name="775" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="895" out_port_id="895"/>
+		<IR id="308" name="895" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer14.conv1.weight" out_port_id="features.denseblock3.denselayer14.conv1.weight"/>
+		<IR id="431" name="Mul1_16999/Fused_Mul_2094720949_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="950" out_port_id="950"/>
+		<IR id="411" name="950" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="899" out_port_id="899"/>
+		<IR id="317" name="Add1_16784/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="781" out_port_id="781"/>
+		<IR id="99" name="781" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1119" out_port_id="1119"/>
+		<IR id="724" name="1119" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="949" out_port_id="949"/>
+		<IR id="409" name="949" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="912" out_port_id="912"/>
+		<IR id="341" name="912" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1037" out_port_id="1037"/>
+		<IR id="573" name="1037" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer15.conv2.weight" out_port_id="features.denseblock4.denselayer15.conv2.weight"/>
+		<IR id="769" name="onnx_initializer_node_features.denseblock4.denselayer15.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="778" out_port_id="778"/>
+		<IR id="92" name="778" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer16.conv1.weight" out_port_id="features.denseblock3.denselayer16.conv1.weight"/>
+		<IR id="457" name="Mul1_17047/Fused_Mul_2095520957_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer5.conv2.weight" out_port_id="features.denseblock3.denselayer5.conv2.weight"/>
+		<IR id="319" name="onnx_initializer_node_features.denseblock3.denselayer5.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1029" out_port_id="1029"/>
+		<IR id="559" name="Add1_17228/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer5.conv1.weight" out_port_id="features.denseblock1.denselayer5.conv1.weight"/>
+		<IR id="64" name="Mul1_16327/Fused_Mul_2083920841_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="860" out_port_id="860"/>
+		<IR id="245" name="860" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="851" out_port_id="851"/>
+		<IR id="229" name="851" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer15.conv2.weight" out_port_id="features.denseblock3.denselayer15.conv2.weight"/>
+		<IR id="449" name="onnx_initializer_node_features.denseblock3.denselayer15.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1120" out_port_id="1120"/>
+		<IR id="726" name="1120" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="815" out_port_id="815"/>
+		<IR id="162" name="815" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1070" out_port_id="1070"/>
+		<IR id="633" name="1070" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer4.conv2.weight" out_port_id="features.denseblock4.denselayer4.conv2.weight"/>
+		<IR id="626" name="onnx_initializer_node_features.denseblock4.denselayer4.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1009" out_port_id="1009"/>
+		<IR id="521" name="1009" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="971" out_port_id="971"/>
+		<IR id="450" name="971" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="839" out_port_id="839"/>
+		<IR id="206" name="839" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="824" out_port_id="824"/>
+		<IR id="179" name="Add1_16532/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer17.conv2.weight" out_port_id="features.denseblock3.denselayer17.conv2.weight"/>
+		<IR id="475" name="onnx_initializer_node_features.denseblock3.denselayer17.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1112" out_port_id="1112"/>
+		<IR id="711" name="1112" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="730" out_port_id="730"/>
+		<IR id="5" name="730" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="902" out_port_id="902"/>
+		<IR id="321" name="902" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="911" out_port_id="911"/>
+		<IR id="339" name="911" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1105" out_port_id="1105"/>
+		<IR id="698" name="1105" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer11.conv1.weight" out_port_id="features.denseblock2.denselayer11.conv1.weight"/>
+		<IR id="228" name="Mul1_16627/Fused_Mul_2088720889_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="905" out_port_id="905"/>
+		<IR id="328" name="905" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="731" out_port_id="731"/>
+		<IR id="6" name="731" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock2.denselayer3.conv2.weight" out_port_id="features.denseblock2.denselayer3.conv2.weight"/>
+		<IR id="129" name="onnx_initializer_node_features.denseblock2.denselayer3.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="774" out_port_id="774"/>
+		<IR id="88" name="Add1_16364/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer11.conv2.weight" out_port_id="features.denseblock3.denselayer11.conv2.weight"/>
+		<IR id="397" name="onnx_initializer_node_features.denseblock3.denselayer11.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1142" out_port_id="1142"/>
+		<IR id="767" name="Add1_17612/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1067" out_port_id="1067"/>
+		<IR id="627" name="1067" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1039" out_port_id="1039"/>
+		<IR id="575" name="1038" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1038" out_port_id="1038"/>
+		<IR id="575" name="1038" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1075" out_port_id="1075"/>
+		<IR id="641" name="1075" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="846" out_port_id="846"/>
+		<IR id="219" name="846" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="754" out_port_id="754"/>
+		<IR id="50" name="754" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="811" out_port_id="811"/>
+		<IR id="154" name="811" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="858" out_port_id="858"/>
+		<IR id="242" name="858" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="772" out_port_id="772"/>
+		<IR id="83" name="772" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="879" out_port_id="879"/>
+		<IR id="279" name="879" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="729" out_port_id="729"/>
+		<IR id="4" name="Add1_/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="821" out_port_id="821"/>
+		<IR id="174" name="Add1_16520/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="910" out_port_id="910"/>
+		<IR id="338" name="Add1_16820/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer19.conv1.weight" out_port_id="features.denseblock3.denselayer19.conv1.weight"/>
+		<IR id="496" name="Mul1_17119/Fused_Mul_2096720969_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer9.conv2.weight" out_port_id="features.denseblock4.denselayer9.conv2.weight"/>
+		<IR id="691" name="onnx_initializer_node_features.denseblock4.denselayer9.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="915" out_port_id="915"/>
+		<IR id="346" name="915" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer10.conv1.weight" out_port_id="features.denseblock4.denselayer10.conv1.weight"/>
+		<IR id="699" name="Mul1_17491/Fused_Mul_2102721029_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1057" out_port_id="1057"/>
+		<IR id="609" name="1057" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1004" out_port_id="1004"/>
+		<IR id="512" name="Add1_17144/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1108" out_port_id="1108"/>
+		<IR id="703" name="1108" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1006" out_port_id="1006"/>
+		<IR id="515" name="1006" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1131" out_port_id="1131"/>
+		<IR id="745" name="1131" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="782" out_port_id="782"/>
+		<IR id="101" name="Add1_16388/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="960" out_port_id="960"/>
+		<IR id="430" name="960" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="850" out_port_id="850"/>
+		<IR id="227" name="850" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="767" out_port_id="767"/>
+		<IR id="75" name="Add1_16340/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="944" out_port_id="944"/>
+		<IR id="399" name="944" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="888" out_port_id="888"/>
+		<IR id="295" name="888" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer14.conv2.weight" out_port_id="features.denseblock4.denselayer14.conv2.weight"/>
+		<IR id="756" name="onnx_initializer_node_features.denseblock4.denselayer14.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1008" out_port_id="1008"/>
+		<IR id="520" name="Add1_17156/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="939" out_port_id="939"/>
+		<IR id="391" name="939" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer6.conv2.weight" out_port_id="features.denseblock1.denselayer6.conv2.weight"/>
+		<IR id="82" name="onnx_initializer_node_features.denseblock1.denselayer6.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1049" out_port_id="1049"/>
+		<IR id="594" name="1049" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1091" out_port_id="1091"/>
+		<IR id="672" name="1091" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer21.conv1.weight" out_port_id="features.denseblock3.denselayer21.conv1.weight"/>
+		<IR id="522" name="Mul1_17167/Fused_Mul_2097520977_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="969" out_port_id="969"/>
+		<IR id="447" name="Add1_17024/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1093" out_port_id="1093"/>
+		<IR id="676" name="Add1_17444/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="834" out_port_id="834"/>
+		<IR id="196" name="834" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1054" out_port_id="1054"/>
+		<IR id="602" name="1054" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="882" out_port_id="882"/>
+		<IR id="286" name="Add1_16724/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="970" out_port_id="970"/>
+		<IR id="448" name="970" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="864" out_port_id="864"/>
+		<IR id="253" name="864" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="803" out_port_id="803"/>
+		<IR id="140" name="Add1_16460/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="783" out_port_id="783"/>
+		<IR id="102" name="783" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1051" out_port_id="1051"/>
+		<IR id="598" name="Add1_17300/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="931" out_port_id="931"/>
+		<IR id="377" name="Add1_16892/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="822" out_port_id="822"/>
+		<IR id="175" name="822" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="925" out_port_id="925"/>
+		<IR id="365" name="925" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="901" out_port_id="901"/>
+		<IR id="320" name="901" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="913" out_port_id="913"/>
+		<IR id="343" name="Add1_16832/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer4.conv1.weight" out_port_id="features.denseblock4.denselayer4.conv1.weight"/>
+		<IR id="621" name="Mul1_17347/Fused_Mul_2100321005_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock3.denselayer24.conv1.weight" out_port_id="features.denseblock3.denselayer24.conv1.weight"/>
+		<IR id="561" name="Mul1_17239/Fused_Mul_2098720989_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="827" out_port_id="827"/>
+		<IR id="183" name="827" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="966" out_port_id="966"/>
+		<IR id="442" name="Add1_17012/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="988" out_port_id="988"/>
+		<IR id="482" name="988" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="features.denseblock1.denselayer1.conv1.weight" out_port_id="features.denseblock1.denselayer1.conv1.weight"/>
+		<IR id="12" name="Mul1_16231/Fused_Mul_2082320825_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="814" out_port_id="814"/>
+		<IR id="161" name="Add1_16496/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="990" out_port_id="990"/>
+		<IR id="486" name="Add1_17096/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer12.conv1.weight" out_port_id="features.denseblock4.denselayer12.conv1.weight"/>
+		<IR id="725" name="Mul1_17539/Fused_Mul_2103521037_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="854" out_port_id="854"/>
+		<IR id="234" name="854" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="793" out_port_id="793"/>
+		<IR id="122" name="Add1_16424/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="825" out_port_id="825"/>
+		<IR id="180" name="825" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="1113" out_port_id="1113"/>
+		<IR id="713" name="1113" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="833" out_port_id="833"/>
+		<IR id="195" name="833" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="904" out_port_id="904"/>
+		<IR id="326" name="904" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="968" out_port_id="968"/>
+		<IR id="445" name="968" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="1003" out_port_id="1003"/>
+		<IR id="510" name="1003" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="features.denseblock4.denselayer12.conv2.weight" out_port_id="features.denseblock4.denselayer12.conv2.weight"/>
+		<IR id="730" name="onnx_initializer_node_features.denseblock4.denselayer12.conv2.weight/Output_0/Data__const" out_port_id="1"/>
+	</map>
+</mapping>
