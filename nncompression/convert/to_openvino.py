@@ -3,4 +3,5 @@
 
 
 def from_onnx(model):
+    # TODO: convert provided onnx model to openvino represnetation
     pass
