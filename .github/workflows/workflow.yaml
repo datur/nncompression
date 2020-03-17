@@ -1,21 +1,18 @@
-name: "Workflow"
+name: Create issues from todos
+
 on:
   push:
     branches:
-      - master
-      - 'develop'
-      - feature/*
+     - develop
+
 jobs:
-  build:
-    runs-on: "ubuntu-latest"
-    steps:
-      - uses: "actions/checkout@master"
-      - name: "TODO to Issue"
-        uses: "alstr/todo-to-issue-action@master"
-        with:
-          REPO: ${{ github.repository }}
-          BEFORE: ${{ github.event.before }}
-          SHA: ${{ github.sha }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LABEL: "# TODO"
-        id: "todo"
+  todos:
+    runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@develop
+        - name: todo-actions
+          uses: dtinth/todo-actions@master
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            TODO_ACTIONS_MONGO_URL: ${{ secrets.TODO_ACTIONS_MONGO_URL }}
