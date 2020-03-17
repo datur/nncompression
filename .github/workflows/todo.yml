@@ -9,7 +9,9 @@ jobs:
   todos:
     runs-on: ubuntu-latest
     steps:
-#       - uses: actions/checkout@master
+      - uses: actions/checkout@master
+      - name: Git pull
+        run: git pull
       - name: todo-actions
         uses: dtinth/todo-actions@master
         env:
