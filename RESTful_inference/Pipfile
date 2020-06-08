@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+certifi = "==2019.11.28"
+flask = "*"
+flake8 = "*"
+flask-redis = "*"
+celery = "*"
+
+[requires]
+python_version = "3.7"
