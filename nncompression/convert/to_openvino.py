@@ -4,6 +4,7 @@
 import subprocess
 import sys
 
+<<<<<<< HEAD
 
 def from_onnx(input_model: str, input_shape: list,  output_dir: str, mo_path: str):
     """
@@ -20,3 +21,7 @@ def from_onnx(input_model: str, input_shape: list,  output_dir: str, mo_path: st
             "--output_dir", f"{output_dir}"]
 
     subprocess.Popen(args)
+=======
+def from_onnx(model):
+    pass
+>>>>>>> bc76a5424765457bf8784285b0362e8d48a1359a
