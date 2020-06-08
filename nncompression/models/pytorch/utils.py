@@ -9,12 +9,13 @@ import torchvision
 import torch
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
+from ...utils import DEVICE
 
 CIFAR10_LABELS = ['airplane', 'automobile', 'bird',
                   'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
 
-def data_loader(path, batch_size=10, mean=None, std=None):
+def path_data_loader(path, batch_size=10, mean=None, std=None):
     """
     A function that creates a dataloader for the root directory of a dataset split such as train, test, or validation.
     This function also applies some transforms on the data such as normalizing the data and converting the image to a tensor.
@@ -144,7 +145,7 @@ def error_criterion(outputs, labels):
     return 100 - train_error
 
 
-def calculate_accuracy(data_loader, net, device):
+def calculate_accuracy(data_loader, net):
     """
     A function that calculates the accuracy of the given network model on a given testloader
 
@@ -157,6 +158,7 @@ def calculate_accuracy(data_loader, net, device):
     :return: Returns the calculated accuracy metric for logging
     :rtype: float
     """
+    device = DEVICE
     net.to(device)
     correct = 0
     total = 0
@@ -204,3 +206,6 @@ def calculate_class_accuracy(data_loader, net, device, classes) -> list:
                 class_total[label] += 1
 
     return [100 * class_correct[i] / class_total[i] for i in range(len(classes))]
+
+
+# TODO: Add dataloaders to this file

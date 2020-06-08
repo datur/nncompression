@@ -2,24 +2,13 @@
 
 """
 
-import torch.nn as nn
+import torchvision.models as models
 
+resnet18 = models.resnet18
+resnet34 = models.resnet34
+resnet50 = models.resnet50
+resnet101 = models.resnet101
+resnet152 = models.resnet152
 
-class ResNet(nn.Module):
-    """Class defining the resnet neural network model
-
-
-    """
-
-    def __init__(self):
-        """Initialises the model based on the input variables
-        """
-        super(ResNet, self).__init__()
-
-    def forward(self, x):
-        """
-        Defines the forward pass of the network
-
-        :param x: input
-        :type x: tensor
-        """
+wide_resnet50 = models.wide_resnet50_2
+wide_resnet101 = models.wide_resnet101_2
