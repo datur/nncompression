@@ -1,25 +1,37 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Markup
 from flask_redis import FlaskRedis
 from celery import Celery
-from time import perf_counter_ns
-from context import nncompression
-from nncompression import utils
+import torch
+from time import perf_counter_ns, time
+import tools.utils as utils
+from tools.utils import get_top5
 import torchvision.models as models
+import torchvision.transforms as transforms
+import torchsummary
+from PIL import Image
+from io import BytesIO
+import energyusage
 
 
 app = Flask(__name__)
 
-
-model = models.resnet18(pretrained=True)
-model.eval()
-model.to(utils.DEVICE)
+net = models.resnet18(pretrained=True)
+net.name = "resent18"
+net.eval()
+net.to(utils.DEVICE)
 
 
 @app.route("/")
 def index():
+    """
+    :return: json response
+    :rtype: json object
+    """
     response = {
-            "status": "All Good.",
-            }
+        "status": "All Good.",
+        "device": utils.DEVICE.type,
+        "current_model": net.name
+    }
     return jsonify(response)
 
 
@@ -34,44 +46,47 @@ def inference():
 
 
     """
+    # Convery bytes to image
+    im = Image.open(BytesIO(request.data))
+    im.show()
 
-    image_bn = request.json['image']
-
-    # convert image from binary to format model accepts
+    # image preprocessing: convert to tensor and add dimension to mimick batch
+    im_tensor = transforms.ToTensor()(im)
+    data = im_tensor.unsqueeze(0)
 
     # run inference
     perf_start = perf_counter_ns()
 
     # inference here
-    out = model(image_bn)
+    top5_values, top5_indicies = get_top5(net, data)
 
     perf_end = perf_counter_ns()
 
     # return results as a json
     return jsonify({
         "result": {
-            "prediction_label": "",
-            "confidence": "",
-            "top_5": "",
-            "recall": "",
-            "precision": "",
-            "f1": "",
-            "confusion_matrix": ""
-
+            "predicted_class": [top5_indicies[0][0].item()],
+            "confidence": [top5_values[0][0].item()],
+            "top5": [x.item() for x in top5_indicies[0]],
+            "top5_confidence": [x.item() for x in top5_values[0]],
+            "inference_time_ms": (perf_end-perf_start) / 10**6,
         },
         "meta": {
-            "performance_ms": (perf_end-perf_start) / 10**6,
-            "device": "",
+            "device": utils.DEVICE.type,
             "model": {
-                "name": "",
-                "size": "",
-                "no_params": "",
-                },
-            "time_now": "", # This is to enable calculation of latency
-            "power_draw": ""
+                "name": net.name,
+                "size_in_MB": net_info['total_size'],
+                "no_params": net_info['total_params'],
+            },
+            "time_now": perf_counter_ns(),  # This is to enable calculation of latency
 
         }
     })
+
+
+@ app.route("/currentmodel")
+def model():
+    return jsonify(torchsummary.summary(net, (3, 224, 224)))
 
 
 if __name__ == "__main__":
