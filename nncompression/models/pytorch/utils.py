@@ -208,4 +208,12 @@ def calculate_class_accuracy(data_loader, net, device, classes) -> list:
     return [100 * class_correct[i] / class_total[i] for i in range(len(classes))]
 
 
-# TODO: Add dataloaders to this file
+def get_imagenet_val_loader(location, batch_size):
+    transform = torchvision.transforms.Compose(
+        [torchvision.transforms.Resize(256), torchvision.transforms.CenterCrop(224), torchvision.transforms.ToTensor()])
+
+    dataset = torchvision.datasets.ImageNet(location, split="val", transform=transform)
+    imgnet_val_loader = torch.utils.data.DataLoader(
+        dataset=dataset, batch_size=batch_size, shuffle=False)
+
+    return imgnet_val_loader
