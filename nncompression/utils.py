@@ -6,7 +6,7 @@ Module containing utility functions for the Models module
 import torch
 
 
-DEVICE = torch.device(f'c0' if torch.cuda.is_available() else 'cpu')  # nopep8 pyl disable=no-member
+DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')  # nopep8 pyl disable=no-member
 BATCH_SIZE = 10
 
 
