@@ -19,6 +19,7 @@ net = models.resnet18(pretrained=True)
 net.name = "resent18"
 net.eval()
 net.to(utils.DEVICE)
+net_info = torchsummary.summary(net, (3, 224, 224))
 
 
 @app.route("/")
