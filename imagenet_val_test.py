@@ -1,9 +1,11 @@
 import torch
+import torchvision.transforms as transforms
 import time
 from nncompression.models import resnet
 from nncompression.utils import DEVICE, IMAGENET_LABELS
 from nncompression.models.pytorch.utils import get_imagenet_val_loader
 from tqdm import tqdm
+
 
 def accuracy(output, target, topk=(1,)):
     """Computes the accuracy over the k top predictions for the specified values of k"""
@@ -21,8 +23,10 @@ def accuracy(output, target, topk=(1,)):
             res.append(correct_k.mul_(100.0 / batch_size))
         return res
 
+
 class AverageMeter(object):
     """Computes and stores the average and current value"""
+
     def __init__(self, name, fmt=':f'):
         self.name = name
         self.fmt = fmt
@@ -62,9 +66,7 @@ class ProgressMeter(object):
         return '[' + fmt + '/' + fmt.format(num_batches) + ']'
 
 
-
-
-print_freq = 100
+print_freq = 5
 
 criterion = torch.nn.CrossEntropyLoss().to(DEVICE)
 net = resnet.resnet18(pretrained=True)
@@ -74,9 +76,10 @@ net.to(DEVICE)
 correct = 0
 total = 0
 
-BATCH_SIZE = 28
+BATCH_SIZE = 1
 
-val_loader = get_imagenet_val_loader('data/imagenet', batch_size=BATCH_SIZE)
+val_loader = get_imagenet_val_loader(
+    '/media/linux/imagenet', batch_size=BATCH_SIZE)
 
 class_correct = list(0. for x in range(len(IMAGENET_LABELS)))
 class_total = list(0. for x in range(len(IMAGENET_LABELS)))
@@ -95,14 +98,14 @@ progress = ProgressMeter(
 
 with torch.no_grad():
     end = time.time()
-    for i, (images, labels) in tqdm(enumerate(val_loader)):
+    for i, (images, labels) in enumerate(val_loader):
 
         images, labels = images.to(DEVICE), labels.to(DEVICE)
 
         outputs = net(images)
         loss = criterion(outputs, labels)
 
-        acc1, acc5 = accuracy(outputs, labels, topk=(1,5))
+        acc1, acc5 = accuracy(outputs, labels, topk=(1, 5))
         losses.update(loss.item(), images.size(0))
         top1.update(acc1[0], images.size(0))
         top5.update(acc5[0], images.size(0))
@@ -112,7 +115,7 @@ with torch.no_grad():
         end = time.time()
 
         if i % print_freq == 0:
-                progress.display(i)
+            progress.display(i)
 
         # for i in range(BATCH_SIZE):
         #     c = (predicted == labels).squeeze()
@@ -122,5 +125,5 @@ with torch.no_grad():
         #         class_total[label] += 1
 
     print(' * Acc@1 {top1.avg:.3f} Acc@5 {top5.avg:.3f}'
-                .format(top1=top1, top5=top5))
+          .format(top1=top1, top5=top5))
     print(top1.avg)
