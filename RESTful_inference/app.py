@@ -1,6 +1,4 @@
 from flask import Flask, jsonify, request, Markup
-from flask_redis import FlaskRedis
-from celery import Celery
 import torch
 from time import perf_counter_ns, time
 import tools.utils as utils
@@ -10,7 +8,6 @@ import torchvision.transforms as transforms
 import torchsummary
 from PIL import Image
 from io import BytesIO
-import energyusage
 
 
 app = Flask(__name__)
@@ -48,26 +45,31 @@ def inference():
 
     """
     # Convery bytes to image
-    im = Image.open(BytesIO(request.data))
+    # print(request.files["files"])
+    im = Image.open(BytesIO(request.files['files'].read()))
     # im.show()
 
     # image preprocessing: convert to tensor and add dimension to mimick batch
     im_tensor = transforms.ToTensor()(im)
+
+    im_tensor = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                     std=[0.229, 0.224, 0.225])(im_tensor)
+
     data = im_tensor.unsqueeze(0)
     data = data.to(utils.DEVICE)
 
-    # run inference
+    # # run inference
     perf_start = perf_counter_ns()
 
-    # inference here
-    top5_values, top5_indicies, raw = get_top5(net, data)
+    # # inference here
+    (top5_values, top5_indicies), raw = get_top5(net, data)
 
     perf_end = perf_counter_ns()
 
     # return results as a json
     return jsonify({
         "result": {
-            "prediction_raw": [x.item() for x in raw[0]],
+            "prediction_raw": raw[0].tolist(),
             "predicted_class": [top5_indicies[0][0].item()],
             "confidence": [top5_values[0][0].item()],
             "top5": [x.item() for x in top5_indicies[0]],
@@ -92,5 +94,10 @@ def model():
     return jsonify(torchsummary.summary(net, (3, 224, 224)))
 
 
+@app.route("/changemodel/<slug>")
+def change_model(model):
+    return(jsonify({"Error": "Not Yet Implimented."}))
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
