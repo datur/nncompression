@@ -19,6 +19,7 @@ net = models.resnet18(pretrained=True)
 net.name = "resent18"
 net.eval()
 net.to(utils.DEVICE)
+net_info = torchsummary.summary(net, (3, 224, 224))
 
 
 @app.route("/")
@@ -48,23 +49,25 @@ def inference():
     """
     # Convery bytes to image
     im = Image.open(BytesIO(request.data))
-    im.show()
+    # im.show()
 
     # image preprocessing: convert to tensor and add dimension to mimick batch
     im_tensor = transforms.ToTensor()(im)
     data = im_tensor.unsqueeze(0)
+    data = data.to(utils.DEVICE)
 
     # run inference
     perf_start = perf_counter_ns()
 
     # inference here
-    top5_values, top5_indicies = get_top5(net, data)
+    top5_values, top5_indicies, raw = get_top5(net, data)
 
     perf_end = perf_counter_ns()
 
     # return results as a json
     return jsonify({
         "result": {
+            "prediction_raw": [x.item() for x in raw[0]],
             "predicted_class": [top5_indicies[0][0].item()],
             "confidence": [top5_values[0][0].item()],
             "top5": [x.item() for x in top5_indicies[0]],

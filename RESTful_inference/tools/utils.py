@@ -11,7 +11,5 @@ IMAGENET_MODELS = {}
 
 
 def get_top5(net, data):
-    with torch.no_grad():
-        data.to(DEVICE)
-        out = net(data)
-        return torch.topk(torch.nn.functional.softmax(out, dim=1), 5)
+    out = net(data)
+    return torch.topk(torch.nn.functional.softmax(out, dim=1), 5)
