@@ -76,7 +76,7 @@ class ProgressMeter(object):
 
 os.environ['NO_PROXY'] = '127.0.0.1'
 
-val_loader = get_imagenet_val_loader('/media/linux/imagenet', batch_size=1)
+val_loader = get_imagenet_val_loader('data/imagenet', batch_size=1)
 
 print(f"Using {DEVICE.type} device")
 batch_time = AverageMeter('Time', ':6.3f')
@@ -86,13 +86,20 @@ progress = ProgressMeter(
     len(val_loader),
     [batch_time, top1, top5],
     prefix='Test: ')
-print_freq = 10
+print_freq = 100
 class_correct = list(0. for _ in range(len(IMAGENET_LABELS)))
 class_total = list(0. for _ in range(len(IMAGENET_LABELS)))
 
 with torch.no_grad():
     end = time.time()
     for i, (images, labels) in enumerate(val_loader):
+        
+        '''
+        TODO: Experiment with json to binary to deliver the tensor as a list
+        TODO: Record the results somewhere maybe in a json file or a database or tensorboard
+        TODO: Average meter for latency inbound and outbound - this should be the time arrived on server minus time sent. and same for response.
+        TODO: work out accuracy per class
+        '''
 
         # load image into pil format
         im = transforms.ToPILImage()(images[0])
@@ -102,7 +109,7 @@ with torch.no_grad():
             im.save(output, 'JPEG')
             data = output.getvalue()
 
-        url = "http://127.0.0.1:5000/inference"
+        url = "http://ml-inference.northeurope.cloudapp.azure.com:5000/inference"
 
         payload = {
             'files': (
@@ -134,4 +141,5 @@ with torch.no_grad():
 
     print(' * Acc@1 {top1.avg:.3f} Acc@5 {top5.avg:.3f}'
           .format(top1=top1, top5=top5))
+    print(batch_time.avg)
     print(top1.avg)
