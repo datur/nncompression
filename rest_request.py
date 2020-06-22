@@ -95,10 +95,10 @@ with torch.no_grad():
     for i, (images, labels) in enumerate(val_loader):
         
         '''
-        TODO: Experiment with json to binary to deliver the tensor as a list
-        TODO: Record the results somewhere maybe in a json file or a database or tensorboard
-        TODO: Average meter for latency inbound and outbound - this should be the time arrived on server minus time sent. and same for response.
-        TODO: work out accuracy per class
+        TODO [#18]: Experiment with json to binary to deliver the tensor as a list
+        TODO [#19]: Record the results somewhere maybe in a json file or a database or tensorboard
+        TODO [#20]: Average meter for latency inbound and outbound - this should be the time arrived on server minus time sent. and same for response.
+        TODO [#21]: work out accuracy per class
         '''
 
         # load image into pil format
